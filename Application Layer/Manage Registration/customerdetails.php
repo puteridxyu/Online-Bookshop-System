@@ -1,26 +1,24 @@
 <?php
 require_once 'file:///C:/xampp/htdocs/SD/config.php';
-
 $retrive = mysqli_query($connection, "SELECT * FROM register");
 $row= mysqli_fetch_array($retrive);
-
-
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>CustomerList</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>CustomerList</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://localhost/sd/css/table.css">
+
 <style>
 * {
   box-sizing: border-box;
@@ -71,13 +69,10 @@ footer {
   text-align: center;
   color: white;
 }
-
-
-}
 </style>
 </head>
-<body>
 
+<body>
 <header>
   <link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css"> 
 		<h20>BOOKSHOP</h20>
@@ -113,39 +108,64 @@ footer {
   
    <article>
   
-     <div class="container-fluid h-100 bg-light text-dark">
+     <!-- <div class="container-fluid h-100 bg-light text-dark">
 		  <div class="row justify-content-center align-items-center h-100">
             <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		  <table  class="table table-striped table-bordered table-sm " cellspacing="10"width="100%">
 				<thead>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Gender</th>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
 						<th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+		</div>
+	</div> -->
+  
+  <div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Admin List</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+						      <th>First Name</th>
+						      <th>Last Name</th>
+						      <th>Gender</th>
+                  <th>Email</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+              <?php
                 while($row = mysqli_fetch_array($retrive))
                 {
-                    ?>
-                    <tr>
-                    <td><?= $row['Firstname'];?></td>
-                    <td><?= $row['Lastname'];?></td>
-					<td><?= $row['Gender'];?></td>
-                    <td><?= $row['Email'];?></td>
-                    </tr>
-                <?php
-                }
-            
-                ?>
-                </tbody>
-            </table>
-         </div>
-		  </div>
-		   </div>
-  
+                  ?>
+                  <tr>
+                  <td><?= $row['Firstname'];?></td>
+                  <td><?= $row['Lastname'];?></td>
+					        <td><?= $row['Gender'];?></td>
+                  <td><?= $row['Email'];?></td>
+                  </tr>
+              <?php
+              }
+            ?>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
   
     
   </article>
