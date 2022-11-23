@@ -83,7 +83,7 @@
                         <form method="POST" class="register-form" id="register-form" action="http://localhost/SD/Business%20Service%20Layer/Manage%20Registration/registerdata.php">
                             <div class="form-group">
                                 <label for="firstname"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="firstname"  placeholder="Your Firt Name"/>
+                                <input type="text" name="firstname"  placeholder="Your First Name"/>
                             </div>
                             <div class="form-group">
                                 <label for="lastname"><i class="zmdi zmdi-account material-icons-name"></i></label>
