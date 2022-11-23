@@ -129,7 +129,7 @@ footer {
        <div class="page-content">
 		<div class="form-v5-content">
 			<form class="form-detail" action='http://localhost/sd/Business%20Service%20Layer/Manage%20Registration/addadmindata.php' method='POST' enctype= "multipart/form-data">
-				<h2>Add Admin</h2>
+				<h2>Add New Admin</h2>
 				<div class="form-row">
 					<label for="full-name">Full Name</label>
 					<input type="text"  name='aname' id="full-name" class="input-text" placeholder="Your Name" required>

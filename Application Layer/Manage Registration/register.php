@@ -79,7 +79,7 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign Up</h2>
+                        <h2 class="form-title">Customer Sign Up</h2>
                         <form method="POST" class="register-form" id="register-form" action="http://localhost/SD/Business%20Service%20Layer/Manage%20Registration/registerdata.php">
                             <div class="form-group">
                                 <label for="firstname"><i class="zmdi zmdi-account material-icons-name"></i></label>
