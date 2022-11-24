@@ -34,7 +34,7 @@
                         <h2 class="form-title">Admin Sign In</h2>
                         <form class="form-horizontal" method="POST" action="http://localhost/sd/admin/adminlog.php">
                             <div class="form-group">
-                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label for="your_name"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="aemail" id="aemail" placeholder="Your Email Address"/>
                             </div>
                             <div class="form-group">
