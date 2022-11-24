@@ -46,7 +46,6 @@ nav {
   padding: 20px;
 }
 
-
 article {
   float: left;
   padding: 20px;
@@ -98,8 +97,8 @@ footer {
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php" class="w3-bar-item w3-button">AdminList</a><br><br>
-	 <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/customerdetails.php" class="w3-bar-item w3-button">UserList</a><br><br>
+    <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php" class="w3-bar-item w3-button">Admin List</a><br><br>
+	 <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/customerdetails.php" class="w3-bar-item w3-button">Customer List</a><br><br>
     <a href="http://localhost/sd/Application%20Layer/Manage%20Report/adminreportview.php" class="w3-bar-item w3-button ">Report</a><br><br>
     <a href="http://localhost/sd/Application%20Layer/Manage%20Delivery/adminorderview.php" class="w3-bar-item w3-button">Transactions</a><br><br>
     <a href="http://localhost/sd/Application%20Layer/Manage%20Stock/booklist.php" class="w3-bar-item w3-button">Stock</a><br><br>
@@ -107,27 +106,6 @@ footer {
   </nav>
   
    <article>
-  
-     <!-- <div class="container-fluid h-100 bg-light text-dark">
-		  <div class="row justify-content-center align-items-center h-100">
-            <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-		  <table  class="table table-striped table-bordered table-sm " cellspacing="10"width="100%">
-				<thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Gender</th>
-						<th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-      </table>
-    </div>
-		</div>
-	</div> -->
-  
   <div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
@@ -166,14 +144,10 @@ footer {
 				</div>
 			</div>
 		</div>
-  
-    
   </article>
 </section>
-
 <footer>
   <p></p>
 </footer>
-
 </body>
 </html>

@@ -14,7 +14,6 @@ $row= mysqli_fetch_array($retrive);
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://localhost/sd/css/table.css">
@@ -71,7 +70,6 @@ $row= mysqli_fetch_array($retrive);
 </head>
 
 <body>
-
 <header>
   <link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css"> 
 		<h20>BOOKSHOP</h20>
@@ -92,7 +90,6 @@ $row= mysqli_fetch_array($retrive);
 </header>
 
 <section>
-
   <nav>
     <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
@@ -107,31 +104,7 @@ $row= mysqli_fetch_array($retrive);
   </nav>
   
   <article>
-  
-     <!-- <div class="container-fluid h-100 bg-light text-dark">
-		  <div >
-        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-			    <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/addadmin.php">ADD ADMIN</a>
-		      <table id="tableHorizontalWrapper" class="table table-striped table-bordered table-sm text-center" cellspacing="0"width="100%">
-				    <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                 <th>Password</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-            </tbody>
-            </table>
-
-         </div>
-		  </div>
-	  </div> -->
-
     <div class="container">
-
 			<div class="row justify-content-center">
 				<div class="col-md-10 text-center mb-5 col-">
 					<h2 class="heading-section">Admin List</h2>
@@ -142,7 +115,6 @@ $row= mysqli_fetch_array($retrive);
           </a>
         </div>
 			</div>
-
 			<div class="row">
 				<div class="col-md-12">
 					<div class="table-wrap">
@@ -167,25 +139,16 @@ $row= mysqli_fetch_array($retrive);
                 <?php
                 }
                 ?>
-						    
 						  </tbody>
-              
 						</table>
-
 					</div>
 				</div>
 			</div>
-
 		</div>
-
   </article>
 </section>
-
-
 <footer>
   <p></p>
 </footer>
-
-
 </body>
 </html>

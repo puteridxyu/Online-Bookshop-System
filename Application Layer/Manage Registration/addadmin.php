@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Font-->
-	<link rel="stylesheet" type="text/css" href="http://localhost/sd/css/roboto-font.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="http://localhost/sd/css/addNewAdmin.css"/>
+  <link rel="stylesheet" type="text/css" href="http://localhost/sd/css/roboto-font.css">
+  <!-- Main Style Css -->
+  <link rel="stylesheet" href="http://localhost/sd/css/addNewAdmin.css"/>
 
 <style>
 * {
@@ -102,30 +102,6 @@ footer {
   </nav>
   
    <article>
-  
-     <!-- <div class="container-fluid h-100 bg-light text-dark">
-		    <div class="row justify-content-center align-items-center h-100">
-            <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-		          <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Registration/addadmindata.php' method='POST' enctype= "multipart/form-data">
-				
-						<b>Name:</b><br>
-						<input type='text' name='aname' size='40'>
-						<br><br>
-						
-						<b>Email:</b><br>
-						<input type='text' name='aemail' size='40'>
-						<br><br>
-						
-						<b>Password:</b><br>
-						<input type='text' name='apass' size='40'>
-						<br><br>
-						
-						<input  type='submit'  name='submit' value='   ADD   '  >
-				</form>
-            </div>
-		    </div>
-		   </div> -->
-  
        <div class="page-content">
 		<div class="form-v5-content">
 			<form class="form-detail" action='http://localhost/sd/Business%20Service%20Layer/Manage%20Registration/addadmindata.php' method='POST' enctype= "multipart/form-data">
@@ -148,13 +124,10 @@ footer {
 			</form>
 		</div>
 	</div>  
-    
   </article>
 </section>
-
 <footer>
   <p></p>
 </footer>
-
 </body>
 </html>
