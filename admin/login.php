@@ -1,54 +1,91 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Font Icon -->
-        <link rel="stylesheet" href="http://localhost/SD/css/material-design-iconic-font.css">
-        <link rel="stylesheet" href="http://localhost/SD/css/material-design-iconic-font.min.css">
-        <!-- Main css -->
-        <link rel="stylesheet" href="http://localhost/SD/css/register.css">
-		<link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css">
-    	<link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css">
-    	<link rel="stylesheet" type="text/css" href="http://localhost/SD/css/book.css">
-		<title>Login</title>
-		<div class="topnav">
-			<ul class="first-ul"><li>
-  			<a href="http://localhost/SD/index.php">Home</a>
-			<a href="http://localhost/SD/Application%20Layer/Manage%20Registration/register.php">Register</a>
-			<div class="dropdown">
-				<button class="dropbtn">Catalogue
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a onclick="alert('Please log in your account to continue the activity')" >English Books</a>
-					<a onclick="alert('Please log in your account to continue the activity')">Malay Books</a>
-					<a onclick="alert('Please log in your account to continue the activity')">Revision Books</a>
-					<a onclick="alert('Please log in your account to continue the activity')">Stationery</a>
-				</div>
-			</div>
-			</li>
-			<li style="float:right">
-  			<a></a>
-			<a></a>
-			</li>
-			</ul>
-		</div>
-	</head>
+<!doctype html>
+<html class="no-js" lang="en">
 
-	<body>		
-	<div class="main">
-    <!-- Customer Login Form -->
-    <section class="sign-in">
-            <div class="container">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>OBS | Sign In</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="../x/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/owl.carousel.css">
+    <link rel="stylesheet" href="../x/css/owl.theme.css">
+    <link rel="stylesheet" href="../x/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/normalize.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="../x/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../x/css/calendar/fullcalendar.print.min.css">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/form/all-type-forms.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="../x/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="../x/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../css/material-design-iconic-font.css">
+        <link rel="stylesheet" href="../css/material-design-iconic-font.min.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="../css/register.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/book.css">
+        
+</head>
+
+<body style="background-color: #F6F8FA;">
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+  
+	  <div class="main" style="background-color: #F6F8FA;">
+    <!-- Admin Form -->
+        <section class="sign-in" >
+            <div class="container" >
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="http://localhost/SD/images/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="http://localhost/SD/Application%20Layer/Manage%20Registration/register.php" class="signup-image-link">Create an account</a>
+                        <figure><img src="../images/signin-image.jpg" alt="sing up image"></figure>
                     </div>
                     <div class="signin-form">
-                        <h2 class="form-title">Customer Sign In</h2>
-                        <form class="form-horizontal" method="POST" action="http://localhost/sd/admin/log.php">
+                    <h2 class="form-title">Customer Sign In</h2>
+                        <form class="form-horizontal" method="POST" action="log.php">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email Address"/>
@@ -61,10 +98,70 @@
                                 <input type="submit" name="login" id="signin" class="form-submit" value="Log in"/>
                             </div>
                         </form>
+                        <br>
+                        <p>Not a member yet? <a href="../Application Layer/Manage Registration/register.php" style="color: #4292DC;">Sign Up</a></p>
                     </div>
+                    
+                </div>
+                <div class="text-center login-footer"  >
+                  <p style="margin-left: 300px; margin-top: -35px;">Online BookShop System · Version 2.1 · 2023</p>
                 </div>
             </div>
         </section>
     </div>
-	</body>
+    </div>
+    
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+
+    </div>
+    <!-- jquery
+		============================================ -->
+    <script src="../x/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="../x/js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="../x/js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="../x/js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="../x/js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="../x/js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="../x/js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="../x/js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="../x/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../x/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="../x/js/metisMenu/metisMenu.min.js"></script>
+    <script src="../x/js/metisMenu/metisMenu-active.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="../x/js/tab.js"></script>
+    <!-- icheck JS
+		============================================ -->
+    <script src="../x/js/icheck/icheck.min.js"></script>
+    <script src="../x/js/icheck/icheck-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="../x/js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="../x/js/main.js"></script>
+</body>
+
 </html>

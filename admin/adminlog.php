@@ -22,7 +22,7 @@ if(mysqli_num_rows($result) > 0)
 		$_SESSION['id'] = $id;
 		$_SESSION['aemail'] = $aemail;
 	}
-	header("Location: http://localhost/sd/admin/adminpage.php");
+	header("Location: ../admin/adminpage.php");
 }
 else
 {

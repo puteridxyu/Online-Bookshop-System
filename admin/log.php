@@ -22,7 +22,7 @@ if(mysqli_num_rows($result) > 0)
 		$_SESSION['id'] = $id;
 		$_SESSION['email'] = $email;
 	}
-	header("Location: http://localhost/sd/bookhome.php");
+	header("Location: ../bookhome.php");
 }
 else
 {
