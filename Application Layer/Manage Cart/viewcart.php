@@ -112,7 +112,7 @@ if(!$connection)
 											<td> <input type="text" size="2" value="'.$x['qty'].'" name="'.$name.'">
 											<td> '.$x['price'].'
 											<td> '.($x['qty']*$x['price']).'
-											<td> <a href="http://localhost/sd/Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">Delete</a>
+											<td> <a href="http://localhost/sd/Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'"><img src="http://localhost/SD/images/trash.png" style="width:35px"></a>
 										</tr>
 										';
 										
@@ -144,7 +144,7 @@ if(!$connection)
 							<form action="http://localhost/sd/Application%20Layer/Manage%20Delivery/custdetails.php">
                            <input type="hidden"  name="cid" value="<?php echo "$e" ?>" ><br>
 				           <input type="hidden"  name="cprice" value="<?php echo "$tot" ?>" ><br>
-                            <input type="submit" name="submit" value="CONFIRM & PROCEED">
+                            <input type="submit" name="submit" value="CHECKOUT" onclick="confirm('Are you sure to proceed checkout?')">
                             </form>
 							</center>
 							</div>
