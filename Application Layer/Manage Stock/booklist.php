@@ -37,162 +37,201 @@ if(isset($_POST['submit']))
 }
 
 ?>
+<!-- /header -->
+<?php include '../../x/layout/head.php'; ?>
+
+<!-- /header -->
+<?php include '../../x/layout/adminheaderNsidebar.php'; ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Admin</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {
-  box-sizing: border-box;
-}
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <h2>Manage Stock</h2>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">Stock</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-status mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-status-wrap drp-lst">
+                            <h4>Stocks List</h4>
+                            <div class="breadcome-heading" style="margin-bottom: 20px;">
+                                <form role="search" class="sr-input-func">
+                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
+                                    <a onclick="searchTable()"><i class="fa fa-search"></i></a>
+                                </form>
+                            </div>
+                            <div class="add-product">
+                                <a title="Add Stock" href="addadmin.php">Add Stock</a>
+                            </div>
+                            <div class="asset-inner">
+                                <table id="tableId2" style="max-width: 1100px;">
+                                    <tr>
+                                        <th style="width: 100px;">Book Name</th>
+                                        <th style="width: 100px;">Category</th>
+                                        <th style="width: 300px;">Description</th>
+                                        <th style="width: 10px;">Page<br>Number</th>
+                                        <th style="width: 10px;">Author</th>
+                                        <th style="width: 100px;">Isbn</th>
+                                        <th style="width: 100px;">Price</th>
+                                        <th style="width: 150px;">Image</th>
+                                        <th style="width: 10px;text-align: center;">Action</th>
+                                    </tr>
 
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+                                    <?php
+                                    while($row = mysqli_fetch_array($retrive))
+                                    {
+                                        ?>
+                                        <tr>
+                                        <td style="white-space: pre-line;"><?= $row['name'];?></td>
+                                        <td style="white-space: pre-line;"><?= $row['category'];?></td>
+                                        <td style="white-space: pre-line;"><?= $row['description'];?></td>
+                                        <td style="white-space: pre-line;"><?= $row['page'];?></td>
+                                        <td style="white-space: pre-line;"><?= $row['edition'];?></td>
+                                        <td style="white-space: pre-line;"><?= $row['isbn'];?></td> 
+                                        <td>RM <?= $row['price'];?>.00</td>
+                                        <td><?php echo '<img src="data:image;base64, '.base64_encode($row['img']).'" alt= "Image" style="width: 100px; height: auto;">'; ?></td>
+                                        <td style="display: flex; justify-content: center;">
+                                        <button onclick="location.href='../../Application Layer/Manage Cart/viewcart.php'" data-toggle="tooltip" title="Edit Item" class="pd-setting-ed" style="background-color: #218838;"><i class="fa fa-edit" style="color: white;"aria-hidden="true"></i></button>
+                                        <button onclick="if(confirm('Are you sure you want to delete this item?')){location.href='../../Business%20Service%20Layer/Manage%20Stock/delete.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #DC3545;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
+                                      </tr>
+                                    <?php
+                                    }
+                                
+                                    ?>
 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 20%;
-  height: 4000px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
+                                   
 
-
-article {
-  float: left;
-  padding: 20px;
-  width: 80%;
-  background-color: #f1f1f1;
-  height: 4000px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
+                                </table >
+                            </div>
+                            <div class="custom-pagination">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a type="button" id="prevBtn" class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a type="button" id="nextBtn"  class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-}
-</style>
-</head>
-<body>
+<!-- /header -->
+<?php include '../../x/layout/footer.php'; ?>
 
-<header>
-  <link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css"> 
-		<h20>BOOKSHOP</h20>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<div class="topnav">
-			<ul class="first-ul">
-			<li style="float:right">
-			<div class="dropdown">
-    			<a href="http://localhost/sd/admin/adminlogout.php">Logout </a>
-		     </div>
-			</div>
-  			<a></a>
-			<a></a>
-			</li>
-			</ul>
-		</div>
-</header>
+<script>
+    // Declare variables
+        var table = document.getElementById("tableId2"),
+            prevBtn = document.getElementById("prevBtn"),
+            nextBtn = document.getElementById("nextBtn"),
+            currentPage = 0,
+            rowsPerPage = 11;
 
-<section>
-  <nav>
-    <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-  </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php" class="w3-bar-item w3-button">AdminList</a><br><br>
-	 <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/customerdetails.php" class="w3-bar-item w3-button">UserList</a><br><br>
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Report/adminreportview.php" class="w3-bar-item w3-button ">Report</a><br><br>
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Delivery/adminorderview.php" class="w3-bar-item w3-button">Transactions</a><br><br>
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Stock/booklist.php" class="w3-bar-item w3-button">Stock</a><br><br>
-  </div>
-  </nav>
-  
- <article>
-  
-     <div class="container-fluid h-100 bg-light text-dark">
-		  <div >
-            <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-			<a href="http://localhost/sd/Application%20Layer/Manage%20Stock/addstock.php">Add Books</a>
-		  <table id="tableHorizontalWrapper" class="table table-striped table-bordered table-sm text-center" cellspacing="0"width="100%">
-				<thead>
-                    <tr>
-                        <th>Book Name</th>
-                        <th>Category</th>
-                        <th>Description</th>
-						<th>Page Number</th>
-						<th>Author</th>
-                        <th>Isbn</th>
-                        <th>Price</th>
-						<th>Image</th>
-						<th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-                while($row = mysqli_fetch_array($retrive))
-                {
-                    ?>
-                    <tr>
-                    <td><?= $row['name'];?></td>
-                    <td><?= $row['category'];?></td>
-				          	<td><?= $row['description'];?></td>
-                    <td><?= $row['page'];?></td>
-				            	<td><?= $row['edition'];?></td>
-                    <td><?= $row['isbn'];?></td>
-					            <td><?= $row['price'];?></td>
-                    <td><?php echo '<img src="data:image;base64, '.base64_encode($row['img']).'" alt= "Image" style="width: 150px; height: 150px;">'; ?></td>
-					          <td><a href="http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/delete.php?id=<?php echo $row["id"]; ?>">Delete</td>
-                    </tr>
-                <?php
+        // Hide all rows
+        for (var i = 1; i < table.rows.length; i++) {
+            table.rows[i].style.display = "none";
+        }
+
+        // Show the rows for the current page
+        for (var i = (currentPage * rowsPerPage); i < (currentPage + 1) * rowsPerPage; i++) {
+            if (table.rows[i]) {
+                table.rows[i].style.display = "table-row";
+            }
+        }
+
+        // Add event listeners to the buttons
+        prevBtn.addEventListener("click", function() {
+            if (currentPage > 0) {
+                currentPage--;
+                updateTable();
+            }
+        });
+        nextBtn.addEventListener("click", function() {
+            if (currentPage < numPages() - 1) {
+                currentPage++;
+                updateTable();
+            }
+        });
+
+        // Function to update the table
+        function updateTable() {
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].style.display = "none";
+            }
+            for (var i = (currentPage * rowsPerPage); i < (currentPage + 1) * rowsPerPage; i++) {
+                if (table.rows[i]) {
+                    table.rows[i].style.display = "table-row";
                 }
-            
-                ?>
-                </tbody>
-            </table>
-         </div>
-		  </div>
-		   </div>
-  
-  
-    
-  </article>
-</section>
+            }
+        }
 
-<footer>
-  <p></p>
-</footer>
+        // Function to calculate the number of pages
+        function numPages() {
+            return Math.ceil(table.rows.length / rowsPerPage);
+        }
+        </script>
 
-</body>
-</html>
+        <script>
+            // Get the table
+        var table = document.getElementById("tableId2");
+
+        // Add a new first column for the numbering
+        for (var i = 0; i < table.rows.length; i++) {
+            var newCell = table.rows[i].insertCell(0);
+            newCell.innerHTML = i;
+        }
+</script>
+
+<script>
+function searchTable() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableId2");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+}
+</script>
+
+
+

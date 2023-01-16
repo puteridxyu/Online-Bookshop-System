@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
   `aname` varchar(200) NOT NULL,
   `aemail` varchar(200) NOT NULL,
   `apass` varchar(200) NOT NULL
@@ -37,13 +38,30 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`aname`, `aemail`, `apass`) VALUES
-('Logadarshan', 'logadarshan@gmail.com', '12345'),
-('Nadia', 'nadia@gmail.com', 'nadia12'),
-('Logadarshan ', 'logadarshan@gmail.com', '12345'),
-('Ayu', 'ayu12@gmail.com', 'ayu123'),
-('Fatin', 'fatin35@gmail.com', 'fatin35'),
-('nabilah', 'nabilah@gmail.com', 'nab12');
+INSERT INTO `admin` (`id`,`aname`, `aemail`, `apass`) VALUES
+(1,'puteri', 'admin@gmail.com', '123'),
+(2,'nabila', 'admin@gmail.com', '123'),
+(3,'chewyang ', 'admin@gmail.com', '123'),
+(4,'pangjieya', 'admin@gmail.com', '123');
+
+CREATE TABLE `register` (
+  `id` int(11) NOT NULL,
+  `Firstname` varchar(200) NOT NULL,
+  `Lastname` varchar(200) NOT NULL,
+  `Gender` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Password` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`id`,`Firstname`, `Lastname`, `Gender`, `Email`, `Password`) VALUES
+(1,'puteri', 'idayu', 'female', 'puteri@gmail.com', '123'),
+(2,'nur', 'nabilah', 'female',  'nadia@gmail.com', '123'),
+(3,'chew', 'yang', 'female',  'chewyang@gmail.com', '123'),
+(4,'pang', 'jieyu', 'female', 'pangjieyu@gmail.com', '123');
 
 -- --------------------------------------------------------
 
@@ -194,23 +212,6 @@ INSERT INTO `payment` (`id`, `nname`, `bname`, `cash`, `card`, `date`, `numb`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `register`
---
-
-CREATE TABLE `register` (
-  `Firstname` varchar(200) NOT NULL,
-  `Lastname` varchar(200) NOT NULL,
-  `Gender` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
-  `Password` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `register`
---
-
-INSERT INTO `register` (`Firstname`, `Lastname`, `Gender`, `Email`, `Password`) VALUES
-('Loga', 'Darshan', 'Male', 'logadarshan@gmail.com', 123);
 
 -- --------------------------------------------------------
 
@@ -231,7 +232,8 @@ CREATE TABLE `report` (
 --
 
 INSERT INTO `report` (`id`, `rname`, `remail`, `rdesc`, `rsta`) VALUES
-(1, 'Logadarshan', 'logadarshan@gmail.com', 'books not in good condition', 'In investigation');
+(1, 'nabilah', 'user@gmail.com', 'books not in good condition', 'In investigation'),
+(2, 'ayu', 'user@gmail.com', 'books koyak', 'In investigation');
 
 -- --------------------------------------------------------
 
@@ -258,6 +260,18 @@ INSERT INTO `tracking` (`id`, `pid`, `tid`, `tdate`, `rdate`, `tsta`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `books`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+  --
+-- Indexes for table `books`
+--
+ALTER TABLE `register`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `books`
@@ -300,6 +314,18 @@ ALTER TABLE `tracking`
 --
 
 --
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+  --
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `register`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
@@ -339,17 +365,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-CREATE TABLE `report` (
-  `id` int(11) NOT NULL,
-  `announcement_Date` varchar(500) NOT NULL,
-  `announcement_Details` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-ALTER TABLE `report`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-

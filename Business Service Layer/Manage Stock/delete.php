@@ -6,9 +6,11 @@ if(!$connection)
 {
 	echo "Database connection faild...";
 }
+	
+
 
 
 	$id=$_GET['id'];;
 	mysqli_query($connection,"delete from `books` where id='$id'");
-	header('location:http://localhost/sd/Application%20Layer/Manage%20Stock/booklist.php');
+	header('location:../../Application Layer/Manage Stock/booklist.php');
 ?>
