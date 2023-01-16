@@ -114,7 +114,7 @@
 
                     </div>
                     <div class="signup-image">
-                        <figure><img src="../x/images/signup-image.jpg" alt="sing up image"></figure>
+                        <figure><img src="../../../x/images/signup-image.jpg" alt="sing up image"></figure>
                     </div>
                 </div>
                 <div class="text-center login-footer" style="margin-top: -50px;"  >
