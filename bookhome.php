@@ -82,7 +82,7 @@
                             <a  href="bookhome.php" aria-expanded="false"><span class="educate-icon educate-home icon-wrap" aria-hidden="true"></span> <span class="mini-click-non">Home</span></a>
                         </li>
                         <li>
-                            <a  href="#" aria-expanded="false"><span class="educate-icon educate-library icon-wrap" aria-hidden="true"></span> <span class="mini-click-non">Catalogue</span></a>
+                            <a  href="Application Layer/Manage Stock/catalogue.php" aria-expanded="false"><span class="educate-icon educate-library icon-wrap" aria-hidden="true"></span> <span class="mini-click-non">Catalogue</span></a>
                         </li>
                         <li>
                             <a href="Application Layer/Manage Cart/viewcart.php"aria-expanded="false"><span class="educate-icon educate-form  icon-wrap" aria-hidden="true"></span> <span class="mini-click-non">Carts</span></a>
