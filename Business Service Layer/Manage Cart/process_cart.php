@@ -4,7 +4,7 @@
 	{
 		//add item
 		$_SESSION['cart'][] = array("name"=>$_GET['name'],"category"=>$_GET['category'],"price"=>$_GET['price'],"qty"=>"1");
-		header("location: ../../Application Layer/Manage Cart/viewcart.php");
+		header("location: ../../Application Layer/Manage Stock/catalogue.php");
 	}
 	else if(isset($_GET['id']))
 	{

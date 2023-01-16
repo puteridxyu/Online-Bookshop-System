@@ -248,8 +248,8 @@
         <div class="contacts-area mg-b-15">
             <div class="container-fluid">
                 <div class="row" style="margin-top: 30px;">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" >
+                        <div class="student-inner-std res-mg-b-30 " style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/nora.jpg" alt="" />
                             </div>
@@ -259,7 +259,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
+                        <div class="student-inner-std res-mg-b-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/memory.jpg" alt="" />
                             </div>
@@ -269,7 +269,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                        <div class="student-inner-std res-mg-b-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/gravity.jpg" alt="" />
                             </div>
@@ -279,7 +279,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30">
+                        <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/the.jpg" alt="" />
                             </div>
@@ -292,7 +292,7 @@
                 </div>
                 <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" >
-                        <div class="student-inner-std res-mg-b-30">
+                        <div class="student-inner-std res-mg-b-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/nora.jpg" alt="" />
                             </div>
@@ -302,7 +302,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
+                        <div class="student-inner-std res-mg-b-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/memory.jpg" alt="" />
                             </div>
@@ -312,7 +312,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                        <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/gravity.jpg" alt="" />
                             </div>
@@ -322,7 +322,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30">
+                        <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30" style="height: 500px;">
                             <div class="student-img">
                                 <img src="http://localhost/SD/images/the.jpg" alt="" />
                             </div>
