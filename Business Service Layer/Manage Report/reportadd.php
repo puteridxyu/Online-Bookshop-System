@@ -6,14 +6,15 @@ if(!$connection)
 {
 	echo "Database connection faild...";
 }
-$rname = $remail = $rdesc = $rsta ;
+$rdate = $rname = $remail = $rdesc = $rsta ;
 
+$rdate = $_POST['rdate'];
 $rname = $_POST['rname'];
 $remail = $_POST['remail'];
 $rdesc  = $_POST['rdesc'];
 $rsta  = $_POST['rsta'];
 
-$sql = "INSERT INTO report (rname,remail,rdesc,rsta) VALUES ('$rname','$remail','$rdesc','$rsta')";
+$sql = "INSERT INTO report (rdate,rname,remail,rdesc,rsta) VALUES ('$rdate','$rname','$remail','$rdesc','$rsta')";
 $result = mysqli_query($connection, $sql);
 
 if($result)
