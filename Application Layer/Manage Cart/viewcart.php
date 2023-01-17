@@ -54,8 +54,8 @@ if(!$connection)
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap drp-lst">
                             <h4>Buying List</h4>
+                            <a class="open-qq btn btn-warning shadow-sm rounded pull-right" id="editBtn" onclick=EditEnable()>Edit</a>
                             
-                           
                             <div class="asset-inner">
 
                           <?php
@@ -63,15 +63,15 @@ if(!$connection)
 							?>
 						
 							<form action="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php" method="POST">
-                                <table  >
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Category</th>
-                                        <th>Product</th>
-                                        <th style="width: 150px;">Quantity</th>
-                                        <th style="width: 150px;">Rate</th>
-                                        <th style="width: 150px;">Price (RM)</th>
-                                        <th>Action</th>
+                                <table>
+                                    <tr> 
+                                        <th style="text-align:center">No</th>
+                                        <th style="text-align:center">Category</th>
+                                        <th style="text-align:center">Product</th>
+                                        <th style="width: 150px;text-align:center">Quantity</th>
+                                        <th style="width: 150px;text-align:center">Rate</th>
+                                        <th style="width: 150px;text-align:center">Price (RM)</th>
+                                        <th style="text-align:center">Action</th>
                                     </tr>
                                     
                                     <?php
@@ -85,13 +85,13 @@ if(!$connection)
 										echo '
                                     <tr>
                                        
-                                        <td> '.$i.'
-                                        <td> '.$x['category'].'
-                                        <td> '.$x['name'].'
-                                        <td> <input type="text" size="2" value="'.$x['qty'].'" name="'.$name.'">
-                                        <td> RM '.$x['price'].'.00
-                                        <td> RM '.($x['qty']*$x['price']).'.00
-                                        <td>
+                                        <td style="text-align:center"> '.$i.'
+                                        <td style="text-align:center"> '.$x['category'].'
+                                        <td style="text-align:center"> '.$x['name'].'
+                                        <td style="text-align:center"> <input type="text" id="quantity" onkeydown="refresh()" size="2" value="'.$x['qty'].'" name="'.$name.'" disabled>
+                                        <td style="text-align:center"> RM '.$x['price'].'.00
+                                        <td style="text-align:center"> RM '.($x['qty']*$x['price']).'.00
+                                        <td style="text-align:center">
                                         
                                             <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;"
                                             class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
@@ -117,13 +117,13 @@ if(!$connection)
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
-                                        <td style="font-weight: bold;">Total</td>
-                                        <td>
+                                        <td style="font-weight: bold;text-align:center">Total</td>
+                                        <td style="text-align:center">
                                             RM <?php echo $tot; ?>.00 
                                         </td>
                                     </form>
-                                        <td>
-                                        <button data-toggle="tooltip" title="Re-calculate" class="pd-setting-ed" type="submit" value=" Re-Calculate " style="background-color: #555555; color: white;"><i class="fa fa-refresh" style="color: white;"aria-hidden="true"></i>&nbsp;Recalculate</button>
+                                        <td style="text-align:center">
+                                        <button data-toggle="tooltip" id="saveBtn" title="Re-calculate" class="open-qq btn btn-info shadow-sm rounded" type="submit" value=" Re-Calculate " hidden><i class="fa fa-refresh" style="color: white;"aria-hidden="true"></i>&nbsp;Recalculate</button>
                                         
                                         </td>
                                     </tr>
@@ -139,7 +139,8 @@ if(!$connection)
                                         <form action="#">
                                             <input type="hidden"  name="cid" value="<?php echo "$e" ?>" ><br>
                                             <input type="hidden"  name="cprice" value="<?php echo "$tot" ?>" ><br>
-                                            <input type="submit" name="submit" value="CONFIRM & PROCEED">
+                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CONFIRM & PROCEED">
+                                            
                                         </form>                                        
                                         </td>
                                     </tr>
@@ -157,8 +158,14 @@ if(!$connection)
                 </div>
             </div>
         </div>
-
-
+<script>
+    function EditEnable() {
+        document.getElementById("editBtn").style.visibility = 'hidden';
+        document.getElementById("saveBtn").removeAttribute("hidden");
+        document.getElementById("quantity").disabled = false;
+        
+    }
+</script>
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>
 
