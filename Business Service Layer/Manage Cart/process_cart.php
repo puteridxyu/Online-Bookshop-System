@@ -4,7 +4,13 @@
 	{
 		//add item
 		$_SESSION['cart'][] = array("name"=>$_GET['name'],"category"=>$_GET['category'],"price"=>$_GET['price'],"qty"=>"1");
-		header("location: ../../Application Layer/Manage Stock/catalogue.php");
+
+		echo '
+
+		<div class="alert alert-success">Item successfully added to cart!</div>
+
+		';
+		echo '<script>setTimeout(function(){window.location.href = "../../Application Layer/Manage Stock/catalogue.php";},500);</script>';
 	}
 	else if(isset($_GET['id']))
 	{

@@ -123,8 +123,9 @@ if(isset($_POST['submit']))
                                     }
                                 
                                     ?>
-
-                                   
+<button id="popup-button">Open Pop-up</button>
+                                   <!-- /malaybook -->
+                                   <?php include 'details.php'; ?> 
 
                                 </table >
                             </div>

@@ -138,7 +138,12 @@
 		============================================ -->
     <script src="../../x/js/knob/jquery.knob.js"></script>
     <script src="../../x/js/knob/knob-active.js"></script>
-    
+    <!-- calendar JS
+		============================================ -->
+    <script src="../../x/js/calendar/moment.min.js"></script>
+    <script src="../../x/js/calendar/fullcalendar.min.js"></script>
+    <script src="../../x/js/calendar/fullcalendar-active.js"></script>
+ 
     <!-- tab JS
 		============================================ -->
     <script src="../../x/js/tab.js"></script>

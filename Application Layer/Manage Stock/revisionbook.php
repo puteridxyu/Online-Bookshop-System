@@ -36,6 +36,7 @@ $row= mysqli_fetch_array($retrive);
 					</p>
 				</div>
 			</div>
+			<br>
 		</div>
 	<?php } ?>
 	

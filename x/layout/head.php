@@ -53,6 +53,10 @@
 		============================================ -->
     <link rel="stylesheet" href="../../x/css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="../../x/css/calendar/fullcalendar.print.min.css">
+        <!-- modals CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/modals.css">
+    
     <!-- touchspin CSS
 		============================================ -->
     <link rel="stylesheet" href="css/touchspin/jquery.bootstrap-touchspin.min.css">
