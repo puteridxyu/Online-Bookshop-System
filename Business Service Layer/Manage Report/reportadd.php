@@ -18,7 +18,7 @@ $result = mysqli_query($connection, $sql);
 
 if($result)
 {
-	header("Location: http://localhost/sd/Application%20Layer/Manage%20Report/addreport.php");
+	header("Location: ../../Application Layer/Manage Report/reportview.php");
 }
 else
 {
