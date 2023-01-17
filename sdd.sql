@@ -221,6 +221,7 @@ INSERT INTO `payment` (`id`, `nname`, `bname`, `cash`, `card`, `date`, `numb`, `
 
 CREATE TABLE `report` (
   `id` int(11) NOT NULL,
+  `rdate` DATETIME NOT NULL,
   `rname` varchar(200) NOT NULL,
   `remail` varchar(200) NOT NULL,
   `rdesc` varchar(500) NOT NULL,
@@ -228,12 +229,16 @@ CREATE TABLE `report` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `report`
+-- Dumping data for table `report` hello
 --
 
-INSERT INTO `report` (`id`, `rname`, `remail`, `rdesc`, `rsta`) VALUES
-(1, 'nabilah', 'user@gmail.com', 'books not in good condition', 'In investigation'),
-(2, 'ayu', 'user@gmail.com', 'books koyak', 'In investigation');
+INSERT INTO `report` (`id`, `rdate`, `rname`, `remail`, `rdesc`, `rsta`) VALUES
+(1, '2022-12-18 06:12:03', 'nabilah', 'user@gmail.com', 'books not in good condition', 'Solved'),
+(2, '2023-01-01 12:56:20', 'ayu', 'user@gmail.com', 'books koyak', 'In investigation'),
+(3, '2023-01-07 17:18:33', 'nad', 'user12@gmail.com', 'page in book not complete', 'In investigation'),
+(4, '2023-01-12 16:30:59', 'siti', 'user22@gmail.com', 'missing page', 'In investigation'),
+(5, '2023-01-12 11:11:13', 'zack', 'zack12@gmail.com', 'stain on the book', 'In investigation'),
+(6, '2023-01-15 20:15:43', 'mohd', 'mohd32@gmail.com', 'repeated pages', 'In investigation');
 
 -- --------------------------------------------------------
 
