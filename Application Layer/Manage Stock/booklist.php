@@ -86,7 +86,7 @@ if(isset($_POST['submit']))
                                 </form>
                             </div>
                             <div class="add-product">
-                                <a title="Add Stock" href="addadmin.php">Add Stock</a>
+                                <a title="Add Stock" href="addstock.php">Add Stock</a>
                             </div>
                             <div class="asset-inner">
                                 <table id="tableId2" style="max-width: 1100px;">

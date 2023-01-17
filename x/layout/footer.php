@@ -157,6 +157,23 @@
     <script src="../../x/js/calendar/moment.min.js"></script>
     <script src="../../x/js/calendar/fullcalendar.min.js"></script>
     <script src="../../x/js/calendar/fullcalendar-active.js"></script>
+    <!-- maskedinput JS
+		============================================ -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/masking-active.js"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="js/datepicker/jquery-ui.min.js"></script>
+    <script src="js/datepicker/datepicker-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="js/form-validation/jquery.form.min.js"></script>
+    <script src="js/form-validation/jquery.validate.min.js"></script>
+    <script src="js/form-validation/form-active.js"></script>
+    <!-- dropzone JS
+		============================================ -->
+    <script src="js/dropzone/dropzone.js"></script>
+    
     <!-- plugins JS
 		============================================ -->
     <script src="../../x/js/plugins.js"></script>

@@ -38,168 +38,309 @@ if(isset($_POST['submit']))
 
 ?>
 
+<!doctype html>
+<html class="no-js" lang="en">
 
-<!DOCTYPE html>
-<html>
 <head>
-<title>Admin</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 20%;
-  height: 1000px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-
-article {
-  float: left;
-  padding: 20px;
-  width: 80%;
-  background-color: #f1f1f1;
-  height: 1000px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-
-}
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Professor | Kiaalap - Kiaalap Admin Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="../../x/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../x/css/owl.theme.css">
+    <link rel="stylesheet" href="../../x/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/main.css">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/form/all-type-forms.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/morrisjs/morris.css">
+    <!-- dropzone CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/dropzone/dropzone.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="../../x/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../../x/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="../../x/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="../../x/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
 
-<header>
-  <link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css"> 
-		<h20>BOOKSHOP</h20>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<div class="topnav">
-			<ul class="first-ul">
-			<li style="float:right">
-			<div class="dropdown">
-    			<a href="http://localhost/sd/admin/adminlogout.php">Logout </a>
-		     </div>
-			</div>
-  			<a></a>
-			<a></a>
-			</li>
-			</ul>
-		</div>
-</header>
+<!-- /header -->
+<?php include '../../x/layout/adminheaderNsidebar.php'; ?>
 
-<section>
-  <nav>
-    <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-  </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php" class="w3-bar-item w3-button">AdminList</a><br><br>
-	 <a href="http://localhost/sd/Application%20Layer/Manage%20Registration/customerdetails.php" class="w3-bar-item w3-button">UserList</a><br><br>
-   <a href="http://localhost/sd/Application%20Layer/Manage%20Report/adminreportview.php" class="w3-bar-item w3-button ">Report</a><br><br>
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Delivery/adminorderview.php" class="w3-bar-item w3-button">Transactions</a><br><br>
-    <a href="http://localhost/sd/Application%20Layer/Manage%20Stock/booklist.php" class="w3-bar-item w3-button">Stock</a><br><br>
-  </div>
-  </nav>
-  
- <article>
-  
-    <div id="content">
-		<div class="post" style="margin-left:100px">
-			<h1 class="title" >Add Book</h1>
-			<div class="entry" >
-				<form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data">
-				
-						<br><b>Book Name:</b><br>
-						<input type='text' name='name' size='40'>
-						<br><br>
-						
-						<br><b>Category:</b><br>
-						<select  name="category">
-                        <option>Category</option>
-                        <?php foreach($option as $key => $value){ ?>
-                            <option value="<?=$value['category'] ;?>"><?=$value['category'] ;?></option>
-                        <?php } ?>
-                    </select>
-						<br><br>
-						
-						<b>Description:</b><br>
-						<textarea cols="40" rows="6" name='description' ></textarea>
-						<br><br>
-						
-						<b>Page Number:</b><br>
-						<input type='text' name='page' size='40'>
-						<br><br>
-						
-						<b>Author:</b><br>
-						<input type='text' name='edition' size='40'>
-						<br><br>
-						
-						<b>ISBN:</b><br>
-						<input type='text' name='isbn' size='40'>
-						<br><br>
-						
-						<b>PRICE:</b><br>
-						<input type='text' name='price' size='40'>
-						<br><br>
-						
-						<b>Image:</b><br>
-						<input type='file' name='img' id='img' size='35'>
-						<br><br>
-					
-						
-						<input  type='submit'  name='submit' value='   OK   '  >
-				</form>
-			</div>
-			
-		</div>
-		
-	</div>
-  
-    
-  </article>
-</section>
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-<footer>
-  <p></p>
-</footer>
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <h2>Add Stock</h2>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><a href="#">Stock</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">Add</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single pro tab review Start-->
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-payment-inner-st">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#description">&nbsp;&nbsp;&nbsp;&nbsp;New </a></li>
+                                <li><a href="#reviews"> &nbsp;&nbsp;&nbsp;Upload file</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div id="dropzone1" class="pro-ad">
+                                                    <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data" id="demo1-upload">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="form-group alert-up-pd">
+                                                                    <div class="dz-message needsclick download-custom">
+                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                                                        </p>
+                                                                        <input name="imageico" class="hd-pro-img" type="text" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type='text' name='name' class="form-control" placeholder="Item Name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type='text' name='edition' class="form-control" placeholder="Author / Brand">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type='text' name='edition' class="form-control" placeholder="Price">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
+                                                            
+                                                                <div class="form-group">
+                                                                    <input type='text' name='page' class="form-control" placeholder="Page Number">
+                                                                </div>
+                                                              
+                                                                <div class="form-group">
+                                                                    <input type='text' name='isbn' type="text" class="form-control" placeholder="ISBN">
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                    <select name="gender" class="form-control">
+                                                                      <option value="none" selected="" disabled="">Select Gender</option>
+                                                                      <option value="0">Male</option>
+                                                                      <option value="1">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group res-mg-t-15">
+                                                                    <textarea style="" name="description" placeholder="Description"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="payment-adress">
+                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="reviews">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                            
+
+                                            <div id="dropzone1" class="pro-ad">
+                                                    <form action="/upload" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                
+                                                                <div class="form-group alert-up-pd">
+                                                                    <div class="dz-message needsclick download-custom">
+                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                                                        </p>
+                                                                        <input name="imageico" class="hd-pro-img" type="text" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                                                                                  </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12"><br>
+                                                                <div class="payment-adress">
+                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area" style="margin-top: 100px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="../../x/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="../../x/js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="../../x/js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="../../x/js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="../../x/js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="../../x/js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="../../x/js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="../../x/js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="../../x/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../x/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="../../x/js/metisMenu/metisMenu.min.js"></script>
+    <script src="../../x/js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="../../x/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="../../x/js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="../../x/js/calendar/moment.min.js"></script>
+    <script src="../../x/js/calendar/fullcalendar.min.js"></script>
+    <script src="../../x/js/calendar/fullcalendar-active.js"></script>
+    <!-- maskedinput JS
+		============================================ -->
+    <script src="../../x/js/jquery.maskedinput.min.js"></script>
+    <script src="../../x/js/masking-active.js"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="../../x/js/datepicker/jquery-ui.min.js"></script>
+    <script src="../../x/js/datepicker/datepicker-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="../../x/js/form-validation/jquery.form.min.js"></script>
+    <script src="../../x/js/form-validation/jquery.validate.min.js"></script>
+    <script src="../../x/js/form-validation/form-active.js"></script>
+    <!-- dropzone JS
+		============================================ -->
+    <script src="../../x/js/dropzone/dropzone.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="../../x/js/tab.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="../../x/js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="../../x/js/main.js"></script>
 </body>
+
 </html>
