@@ -159,19 +159,56 @@ if(isset($_POST['submit']))
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
-                                                <div id="dropzone1" class="pro-ad">
-                                                    <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data" id="demo1-upload">
+                                                <div  class="pro-ad">
+                                                    <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                                <div class="form-group alert-up-pd">
-                                                                    <div class="dz-message needsclick download-custom">
-                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
-                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
-                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
-                                                                        </p>
-                                                                        <input name="imageico" class="hd-pro-img" type="text" />
-                                                                    </div>
+                                                            
+<style>
+.form-control2 {
+    text-align: center;
+    min-height: 150px;
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+  document.querySelector('.form-control').ondragover = function(){
+    this.style.borderColor = '#ff0000';
+    return false;
+};
+document.querySelector('.form-control').ondragleave = function(){
+    this.style.borderColor = 'rgba(0, 0, 0, 0.3)';
+    return false;
+};
+document.querySelector('.form-control').ondrop = function(e){
+    e.preventDefault();
+    this.style.borderColor = 'rgba(0, 0, 0, 0.3)';
+    let file = e.dataTransfer.files[0];
+    document.querySelector('#img').files = file;
+};
+</script>
+                                                                <div class="form-group form-group2" >
+
+                                                                    <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed rgba(0, 0, 0, 0.3);
+                                                                                background: white;padding: 20px 20px; cursor: pointer; " >
+
+                                                                        <i style="color: #999999; font-size: 30px;" class="fa fa-download" aria-hidden="true" ></i>
+                                                                        <h2 style="font-size:17px; color: #999999; ">
+                                                                            Drop image here or click to upload.
+                                                                        </h2><br>
+
+                                                                        <h2 style="font-size:17px; color: #999999; ">
+                                                                            <div style="display: flex; align-items: center; justify-content: center;">
+                                                                            <input type='file' name='img' id='img' id="image-upload"/> </div>
+                                                                        </h2>
+                                                                   </div>
+                                                                    
                                                                 </div>
+
                                                                 <div class="form-group">
                                                                     <input type='text' name='name' class="form-control" placeholder="Item Name">
                                                                 </div>
@@ -179,7 +216,7 @@ if(isset($_POST['submit']))
                                                                     <input type='text' name='edition' class="form-control" placeholder="Author / Brand">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type='text' name='edition' class="form-control" placeholder="Price">
+                                                                    <input type='text' name='price' class="form-control" placeholder="Price">
                                                                 </div>
                                                                 
                                                             </div>
@@ -191,25 +228,28 @@ if(isset($_POST['submit']))
                                                                 </div>
                                                               
                                                                 <div class="form-group">
-                                                                    <input type='text' name='isbn' type="text" class="form-control" placeholder="ISBN">
+                                                                    <input type='text' name='isbn' class="form-control" placeholder="ISBN">
                                                                 </div>
                                                                 
                                                                 <div class="form-group">
-                                                                    <select name="gender" class="form-control">
-                                                                      <option value="none" selected="" disabled="">Select Gender</option>
-                                                                      <option value="0">Male</option>
-                                                                      <option value="1">Female</option>
+                                                                    <select name="category" class="form-control">
+                                                                      <option >Select Category</option>
+                                                                      
+                                                                      <?php foreach($option as $key => $value){ ?>
+                                                                      <option value="<?=$value['category'] ;?>"><?=$value['category'] ;?></option>
+                                                                      <?php } ?>
+
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group res-mg-t-15">
-                                                                    <textarea style="" name="description" placeholder="Description"></textarea>
+                                                                    <textarea style="height: 170px;" name='description'  placeholder="Description"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                    <input type="submit" name='submit' value='Submit'  class="btn btn-primary waves-effect waves-light">
                                                                 </div>
                                                             </div>
                                                         </div>
