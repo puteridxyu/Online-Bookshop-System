@@ -40,9 +40,11 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`,`aname`, `aemail`, `apass`) VALUES
 (1,'puteri', 'admin@gmail.com', '123'),
-(2,'nabila', 'admin@gmail.com', '123'),
-(3,'chewyang ', 'admin@gmail.com', '123'),
-(4,'pangjieya', 'admin@gmail.com', '123');
+(2,'puteri', 'admin@gmail.com', '123'),
+(3,'nabila', 'admin@gmail.com', '123'),
+(4,'chewyang ', 'admin@gmail.com', '123'),
+(5,'pangjieya', 'admin@gmail.com', '123');
+
 
 CREATE TABLE `register` (
   `id` int(11) NOT NULL,
@@ -54,14 +56,16 @@ CREATE TABLE `register` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `register`
+-- Dumping data for table `register` 
 --
 
 INSERT INTO `register` (`id`,`Firstname`, `Lastname`, `Gender`, `Email`, `Password`) VALUES
 (1,'puteri', 'idayu', 'female', 'puteri@gmail.com', '123'),
-(2,'nur', 'nabilah', 'female',  'nadia@gmail.com', '123'),
-(3,'chew', 'yang', 'female',  'chewyang@gmail.com', '123'),
-(4,'pang', 'jieyu', 'female', 'pangjieyu@gmail.com', '123');
+(2,'puteri', 'idayu', 'female', 'puteri@gmail.com', '123'),
+(3,'nur', 'nabilah', 'female',  'nadia@gmail.com', '123'),
+(4,'chew', 'yang', 'female',  'chewyang@gmail.com', '123'),
+(5,'pang', 'jieyu', 'female', 'pangjieyu@gmail.com', '123');
+
 
 -- --------------------------------------------------------
 
