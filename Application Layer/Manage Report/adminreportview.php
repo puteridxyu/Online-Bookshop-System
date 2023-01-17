@@ -76,6 +76,10 @@ $row= mysqli_fetch_array($edit);
                                     <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
                                     <a onclick="searchTable()"><i class="fa fa-search"></i></a>
                                 </form>
+                                
+                            </div>
+                            <div class="add-product">
+                                <a title="Add Stock" href="approval.php" >Approval</a>
                             </div>
                             <div class="asset-inner">
                                 <table id="tableId">
@@ -140,7 +144,38 @@ $row= mysqli_fetch_array($edit);
                 </div>
             </div>
         </div>
+        <script>
+    // Get the table element
+var table = document.getElementById("tableId");
 
+// Get the rows of the table
+var rows = table.getElementsByTagName("tr");
+
+// Create an array to store the rows
+var rowArray = [];
+
+// Add the rows to the array
+for (var i = 0; i < rows.length; i++) {
+    rowArray.push(rows[i]);
+}
+
+
+rowArray.sort(function(a, b) {
+    var dateA = new Date(a.cells[0].innerHTML);
+    var dateB = new Date(b.cells[0].innerHTML);
+    return dateB - dateA;
+});
+
+// Clear the table
+while (table.firstChild) {
+    table.removeChild(table.firstChild);
+}
+
+// Add the sorted rows back to the table
+for (var i = 0; i < rowArray.length; i++) {
+    table.appendChild(rowArray[i]);
+}
+</script>
 
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>
