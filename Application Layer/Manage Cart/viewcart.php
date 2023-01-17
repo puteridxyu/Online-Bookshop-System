@@ -54,7 +54,7 @@ if(!$connection)
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap drp-lst">
                             <h4>Buying List</h4>
-                            <a class="open-qq btn btn-warning shadow-sm rounded pull-right" id="editBtn" onclick=EditEnable()>Edit</a>
+                            
                             
                             <div class="asset-inner">
 
@@ -62,7 +62,7 @@ if(!$connection)
 							//	print_r($_SESSION);
 							?>
 						
-							<form action="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php" method="POST">
+							<form action="../../Business%20Service%20Layer/Manage%20Delivery/custdetails.php" method="POST">
                                 <table>
                                     <tr> 
                                         <th style="text-align:center">No</th>
@@ -88,7 +88,7 @@ if(!$connection)
                                         <td style="text-align:center"> '.$i.'
                                         <td style="text-align:center"> '.$x['category'].'
                                         <td style="text-align:center"> '.$x['name'].'
-                                        <td style="text-align:center"> <input type="text" id="quantity" onkeydown="refresh()" size="2" value="'.$x['qty'].'" name="'.$name.'" disabled>
+                                        <td style="text-align:center"> <input type="text" id="quantity" onkeydown="refresh()" size="2" value="'.$x['qty'].'" name="'.$name.'">
                                         <td style="text-align:center"> RM '.$x['price'].'.00
                                         <td style="text-align:center"> RM '.($x['qty']*$x['price']).'.00
                                         <td style="text-align:center">
@@ -97,7 +97,6 @@ if(!$connection)
                                             class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
                                             <i class="fa fa-trash-o" style="color: white;"></i>
                                             </a>
-                                          
                                         </td>
 
                                     </tr>
@@ -122,10 +121,7 @@ if(!$connection)
                                             RM <?php echo $tot; ?>.00 
                                         </td>
                                     </form>
-                                        <td style="text-align:center">
-                                        <button data-toggle="tooltip" id="saveBtn" title="Re-calculate" class="open-qq btn btn-info shadow-sm rounded" type="submit" value=" Re-Calculate " hidden><i class="fa fa-refresh" style="color: white;"aria-hidden="true"></i>&nbsp;Recalculate</button>
                                         
-                                        </td>
                                     </tr>
 
                                     <tr>
@@ -136,10 +132,10 @@ if(!$connection)
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
                                         <td>
-                                        <form action="#">
+                                        <form action="../../Application%20Layer/Manage%20Delivery/custdetails.php" method="POST">
                                             <input type="hidden"  name="cid" value="<?php echo "$e" ?>" ><br>
                                             <input type="hidden"  name="cprice" value="<?php echo "$tot" ?>" ><br>
-                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CONFIRM & PROCEED">
+                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CHECKOUT">
                                             
                                         </form>                                        
                                         </td>
@@ -150,6 +146,7 @@ if(!$connection)
                                     
                                 </table>
                             </div>
+                            
                             <div class="custom-pagination">
                                
                             </div>
@@ -158,14 +155,6 @@ if(!$connection)
                 </div>
             </div>
         </div>
-<script>
-    function EditEnable() {
-        document.getElementById("editBtn").style.visibility = 'hidden';
-        document.getElementById("saveBtn").removeAttribute("hidden");
-        document.getElementById("quantity").disabled = false;
-        
-    }
-</script>
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>
 
