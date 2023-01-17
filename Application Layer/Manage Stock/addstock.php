@@ -189,7 +189,7 @@ if(isset($_POST['submit']))
                                                                     <input type='text' name='edition' class="form-control" placeholder="Author / Brand" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type='text' name='price' pattern="^[0-9]+(\.[0-9]+)?$" class="form-control" placeholder="Price" required>
+                                                                    <input type='float' name='price' pattern="^[0-9]+(\.[0-9]+)?$" class="form-control" placeholder="Price" required>
                                                                 </div>
                                                                 
                                                             </div>
@@ -197,7 +197,7 @@ if(isset($_POST['submit']))
 
                                                             
                                                                 <div class="form-group">
-                                                                    <input type='text' name='page'  pattern="^[0-9]+)?$" class="form-control" placeholder="Page Number" required>
+                                                                    <input type='number' name='page'  pattern="^[0-9]+)?$" class="form-control" placeholder="Page Number" required>
                                                                 </div>
                                                               
                                                                 <div class="form-group">
