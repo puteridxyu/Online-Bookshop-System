@@ -166,7 +166,7 @@ if(isset($_POST['submit']))
                                                             
                                                                 <div class="form-group " >
 
-                                                                    <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed rgba(0, 0, 0, 0.3);
+                                                                    <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed #CCCCCC;
                                                                                 background: white;padding: 20px 20px; cursor: pointer; " >
 
                                                                         <i style="color: #999999; font-size: 30px;" class="fa fa-download" aria-hidden="true" ></i>
@@ -238,20 +238,24 @@ if(isset($_POST['submit']))
                                             <div class="review-content-section">
                                             
 
-                                            <div id="dropzone1" class="pro-ad">
-                                                    <form action="/upload" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
+                                            <div  class="pro-ad">
+                                                    <form action="/upload"  id="demo1-upload">
                                                         <div class="row">
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 
-                                                                <div class="form-group alert-up-pd">
-                                                                    <div class="dz-message needsclick download-custom">
-                                                                        <i class="fa fa-download edudropnone" aria-hidden="true"></i>
-                                                                        <h2 class="edudropnone">Drop image here or click to upload.</h2>
-                                                                        <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
-                                                                        </p>
-                                                                        <input name="imageico" class="hd-pro-img" type="text" />
-                                                                    </div>
-                                                                </div>
+                                                                    <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed #CCCCCC;
+                                                                                background: white;padding: 20px 20px; cursor: pointer; " >
+
+                                                                        <i style="color: #999999; font-size: 30px;" class="fa fa-download" aria-hidden="true" ></i>
+                                                                        <h2 style="font-size:17px; color: #999999; ">
+                                                                            Drop excel file here or click to upload.
+                                                                        </h2><br>
+
+                                                                        <h2 style="font-size:17px; color: #999999; margin-left: 75px; font-weight: normal;" >
+                                                                            <div style="display: flex; align-items: center; justify-content: center;">
+                                                                            <input type='file' name='img' id='img' id="image-upload" style="border: none; font-weight: lighter; font-size: 10px;" required/> </div>
+                                                                        </h2>
+                                                                   </div>
                                                             </div>
                                                             
                                                                                                                   </div>
