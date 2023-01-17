@@ -62,7 +62,7 @@ if(!$connection)
 							//	print_r($_SESSION);
 							?>
 						
-							<form action="../../Business%20Service%20Layer/Manage%20Delivery/custdetails.php" method="POST">
+							<form action="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php" method="POST">
                                 <table>
                                     <tr> 
                                         <th style="text-align:center">No</th>
@@ -93,7 +93,7 @@ if(!$connection)
                                         <td style="text-align:center"> RM '.($x['qty']*$x['price']).'.00
                                         <td style="text-align:center">
                                         
-                                            <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;"
+                                            <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;width:50px;"
                                             class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
                                             <i class="fa fa-trash-o" style="color: white;"></i>
                                             </a>
@@ -117,7 +117,7 @@ if(!$connection)
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
                                         <td style="font-weight: bold;text-align:center">Total</td>
-                                        <td style="text-align:center">
+                                        <td style="font-weight: bold;text-align:center">
                                             RM <?php echo $tot; ?>.00 
                                         </td>
                                     </form>
