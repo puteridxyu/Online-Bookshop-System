@@ -44,7 +44,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Professor | Kiaalap - Kiaalap Admin Template</title>
+    <title>OBS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -154,44 +154,17 @@ if(isset($_POST['submit']))
                                 <li class="active"><a href="#description">&nbsp;&nbsp;&nbsp;&nbsp;New </a></li>
                                 <li><a href="#reviews"> &nbsp;&nbsp;&nbsp;Upload file</a></li>
                             </ul>
-                            <div id="myTabContent" class="tab-content custom-product-edit">
+                            <div id="myTabContent" class="tab-content custom-product-edit" >
                                 <div class="product-tab-list tab-pane fade active in" id="description">
-                                    <div class="row">
+                                    <div class="row" >
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
-                                                <div  class="pro-ad">
-                                                    <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
-                                                        <div class="row">
+                                                <div  class="" >
+                                                    <form action='http://localhost/sd/Business%20Service%20Layer/Manage%20Stock/add.php' method='POST' enctype= "multipart/form-data"  id="demo1-upload">
+                                                        <div class="row" >
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             
-<style>
-.form-control2 {
-    text-align: center;
-    min-height: 150px;
-    border: 2px dashed rgba(0, 0, 0, 0.3);
-    background: white;
-    padding: 20px 20px;
-    cursor: pointer;
-}
-</style>
-
-<script>
-  document.querySelector('.form-control').ondragover = function(){
-    this.style.borderColor = '#ff0000';
-    return false;
-};
-document.querySelector('.form-control').ondragleave = function(){
-    this.style.borderColor = 'rgba(0, 0, 0, 0.3)';
-    return false;
-};
-document.querySelector('.form-control').ondrop = function(e){
-    e.preventDefault();
-    this.style.borderColor = 'rgba(0, 0, 0, 0.3)';
-    let file = e.dataTransfer.files[0];
-    document.querySelector('#img').files = file;
-};
-</script>
-                                                                <div class="form-group form-group2" >
+                                                                <div class="form-group " >
 
                                                                     <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed rgba(0, 0, 0, 0.3);
                                                                                 background: white;padding: 20px 20px; cursor: pointer; " >
@@ -201,22 +174,22 @@ document.querySelector('.form-control').ondrop = function(e){
                                                                             Drop image here or click to upload.
                                                                         </h2><br>
 
-                                                                        <h2 style="font-size:17px; color: #999999; ">
+                                                                        <h2 style="font-size:17px; color: #999999; margin-left: 75px; font-weight: normal;" >
                                                                             <div style="display: flex; align-items: center; justify-content: center;">
-                                                                            <input type='file' name='img' id='img' id="image-upload"/> </div>
+                                                                            <input type='file' name='img' id='img' id="image-upload" style="border: none; font-weight: lighter; font-size: 10px;" required/> </div>
                                                                         </h2>
                                                                    </div>
                                                                     
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <input type='text' name='name' class="form-control" placeholder="Item Name">
+                                                                    <input type='text' name='name' class="form-control" placeholder="Item Name" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type='text' name='edition' class="form-control" placeholder="Author / Brand">
+                                                                    <input type='text' name='edition' class="form-control" placeholder="Author / Brand" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type='text' name='price' class="form-control" placeholder="Price">
+                                                                    <input type='text' name='price' pattern="^[0-9]+(\.[0-9]+)?$" class="form-control" placeholder="Price" required>
                                                                 </div>
                                                                 
                                                             </div>
@@ -224,15 +197,15 @@ document.querySelector('.form-control').ondrop = function(e){
 
                                                             
                                                                 <div class="form-group">
-                                                                    <input type='text' name='page' class="form-control" placeholder="Page Number">
+                                                                    <input type='text' name='page'  pattern="^[0-9]+)?$" class="form-control" placeholder="Page Number" required>
                                                                 </div>
                                                               
                                                                 <div class="form-group">
-                                                                    <input type='text' name='isbn' class="form-control" placeholder="ISBN">
+                                                                    <input type='text' name='isbn' class="form-control" placeholder="ISBN" required>
                                                                 </div>
                                                                 
                                                                 <div class="form-group">
-                                                                    <select name="category" class="form-control">
+                                                                    <select name="category" class="form-control" required>
                                                                       <option >Select Category</option>
                                                                       
                                                                       <?php foreach($option as $key => $value){ ?>
@@ -242,7 +215,7 @@ document.querySelector('.form-control').ondrop = function(e){
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group res-mg-t-15">
-                                                                    <textarea style="height: 170px;" name='description'  placeholder="Description"></textarea>
+                                                                    <textarea style="height: 170px;" name='description'  placeholder="Description" required></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
