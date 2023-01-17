@@ -69,7 +69,7 @@ $row= mysqli_fetch_array($retrive);
                                         <td><?= $row['Gender'];?></td>
                                         <td><?= $row['Email'];?></td>
                                         <td>
-                                        <button onclick="if(confirm('Are you sure you want to delete this item?')){location.href='../../Business%20Service%20Layer/Manage%20Registration/deletecustomer.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
+                                        <button onclick="if(confirm('Are you sure you want to delete this customer?')){location.href='../../Business%20Service%20Layer/Manage%20Registration/deletecustomer.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
                                         </td>
                                     </tr>
                                     <?php }?>

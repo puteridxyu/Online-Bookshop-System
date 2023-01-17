@@ -85,7 +85,7 @@ if(!$connection)
                                         <td><?= $row['aemail'];?></td>
                                         
                                         <td>
-                                        <button onclick="if(confirm('Are you sure you want to delete this item?')){location.href='../../Business%20Service%20Layer/Manage%20Registration/deleteadmin.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
+                                        <button onclick="if(confirm('Are you sure you want to delete this admin?')){location.href='../../Business%20Service%20Layer/Manage%20Registration/deleteadmin.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
                                       </td>
                                     </tr>
                                     <?php }?>
