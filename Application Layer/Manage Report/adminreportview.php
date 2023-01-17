@@ -76,6 +76,10 @@ $row= mysqli_fetch_array($edit);
                                     <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
                                     <a onclick="searchTable()"><i class="fa fa-search"></i></a>
                                 </form>
+                                
+                            </div>
+                            <div class="add-product">
+                                <a title="Add Stock" href="approval.php" >Approval</a>
                             </div>
                             <div class="asset-inner">
                                 <table id="tableId">
