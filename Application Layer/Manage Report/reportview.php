@@ -64,7 +64,7 @@ $row= mysqli_fetch_array($retrive);
                             <div class="asset-inner">
                                 <table id="tableId">
                                     <tr>
-                                        <th>Date</th>
+                                        <th>Date & Time</th>
                                         <th>Full Name</th>
                                         <th>Email</th>
                                         <th>Report Details</th>
@@ -73,7 +73,7 @@ $row= mysqli_fetch_array($retrive);
                                     </tr>
                                     <?php while($row = mysqli_fetch_array($retrive)) {?>
                                     <tr>
-                                        <td><?= $row['rdate'];?></td>
+                                        <td>&nbsp;<?= $row['rdate'];?></td>
                                         <td><?= $row['rname'];?></td>
                                         <td><?= $row['remail'];?></td>
                                         <td><?= $row['rdesc'];?></td>

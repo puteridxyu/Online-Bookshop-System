@@ -62,7 +62,17 @@ if(!$connection)
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="all-form-element-inner">
                                                 <form action="../../Business Service Layer/Manage Report/reportadd.php" method="POST">
-                                                    <div class="form-group-inner">
+                                                <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label class="login2 pull-right pull-right-pro">Date & Time (YYYY-MM-DD HH:MI:SS)</label>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                                                                <input name="rdate" type="text" class="form-control" placeholder="Enter the date and time of report" required/>
+                                                            </div>
+                                                        </div>
+                                                    </div>    
+                                                <div class="form-group-inner">
                                                         <div class="row">
                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                 <label class="login2 pull-right pull-right-pro">Full Name</label>

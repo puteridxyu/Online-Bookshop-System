@@ -80,6 +80,7 @@ $row= mysqli_fetch_array($edit);
                             <div class="asset-inner">
                                 <table id="tableId">
                                     <tr>
+                                        <th>Date & Time</th>
                                         <th>Full Name</th>
                                         <th>Email</th>
                                         <th>Report Details</th>
@@ -93,6 +94,7 @@ $row= mysqli_fetch_array($edit);
                                         ?>
 
                                     <tr>
+                                        <td>&nbsp;<?= $row['rdate'];?></td>
                                         <td><?= $row['rname'];?></td>
                                         <td><?= $row['remail'];?></td>
                                         <td><?= $row['rdesc'];?></td>

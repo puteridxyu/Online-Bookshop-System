@@ -9,5 +9,5 @@ if(!$connection)
 	
 	$id=$_GET['id'];;
 	mysqli_query($connection,"delete from `report` where id='$id'");
-	header('location:http://localhost/sd/Application%20Layer/Manage%20Report/adminviewreport.php');
+	header('location:../../Application%20Layer/Manage%20Report/adminreportview.php');
 ?>
