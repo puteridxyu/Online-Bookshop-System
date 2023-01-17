@@ -11,112 +11,90 @@ $retrive = mysqli_query($connection, "SELECT * FROM report ");
 $row= mysqli_fetch_array($retrive);
 
 ?>
+<!-- /header -->
+<?php include '../../x/layout/head.php'; ?>
+
+<!-- /header -->
+<?php include '../../x/layout/headerNsidebar.php'; ?>
 
 
-<!DOCTYPE html>
-<html>
-	<head>
-	<link rel="stylesheet" type="text/css" href="http://localhost/SD/css/style.css"> 
-	<link rel="stylesheet" type="text/css" href="http://localhost/sd/css/book.css">
-		<title>ENGLISH</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<div class="topnav">
-			<ul class="first-ul"><li>
-  			<a href="http://localhost/sd/bookhome.php">Home</a>
-			<div class="dropdown">
-				<button class="dropbtn">Catalogue
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Stock/englishbook.php" >English Books</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Stock/malaybooks.php">Malay Books</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Stock/revision.php">Revision Books</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Stock/Stationery.php">Stationery</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Report
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Report/addreport.php" >File Report</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Report/reportview.php">View Report</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Cart
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Cart/viewcart.php" >View Cart</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Delivery/orderlist.php">Order Status</a>
-					<a href="http://localhost/sd/Application%20Layer/Manage%20Delivery/custtrack.php">Tracking</a>
-				</div>
-			</div>
-			</li>
-			<li style="float:right">
-  			<a href="http://localhost/sd/logout.php">Logout</a>
-			<a></a>
-			</li>
-			</ul>
-		</div>
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-	</head>
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <h2>Reports</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">Reports</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-status mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-status-wrap drp-lst">
+                            <h4>Reports List</h4>
+                            <div class="breadcome-heading" style="margin-bottom: 20px;">
+                                <form role="search" class="sr-input-func">
+                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
+                                    <a onclick="searchTable()"><i class="fa fa-search"></i></a>
+                                </form>
+                            </div>
+                            <div class="add-product">
+                                <a href="addreport.php">Make Report</a>
+                            </div>
+                            <div class="asset-inner">
+                                <table id="tableId">
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Email</th>
+                                        <th>Report Details</th>
+                                        <th>Report Status</th>
+                                       
+                                    </tr>
+                                    <?php while($row = mysqli_fetch_array($retrive)) {?>
+                                    <tr>
+                                        <td><?= $row['rname'];?></td>
+                                        <td><?= $row['remail'];?></td>
+                                        <td><?= $row['rdesc'];?></td>
+                                        <td><?= $row['rsta'];?></td>
+                                    </tr>
+                                    <?php }?>
+                                    
+                                </table>
+                            </div>
+                            <div class="custom-pagination">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a type="button" id="prevBtn" class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a type="button" id="nextBtn"  class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<body style="background-color:LightCyan">
-	<div class="header">
-		<h1> ReportList </h1>
-	</div>
-	
-	<div class="body">
-	
-	        
-			 <div id="page">
-					<!-- start content -->
-					<div id="content">
-						<div class="post">
-							<h1 class="title">ReportList</h1>
-							<div class="entry">
-					
-						
-							<table width="100%" border="0">
-								<tr > 
-									<td><b>Full Name</b></td> 
-									<td><b>Email</b></td> 
-									<td><b>Description</b></td> 
-									<td><b>Status</b></td> 
-								</tr>
-								<tr><td colspan="7"><hr style="border:1px Solid #a1a1a1;"></tr>
-							
-							     
-								  <?php
-                while($row = mysqli_fetch_array($retrive))
-                {
-                    ?>
-                    <tr>
-                    <td><?= $row['rname'];?></td>
-                    <td><?= $row['remail'];?></td>
-					<td><?= $row['rdesc'];?></td>
-                    <td><?= $row['rsta'];?></td>
-                    </tr>
-                <?php
-                }
-            
-                ?>
-							
-							
-							
-							
-							
-							</div>
-							
-						</div>
-						
-					</div>
-	
-	</div>
-	
-	
-</body>
-</html>
+
+<!-- /header -->
+<?php include '../../x/layout/footer.php'; ?>
