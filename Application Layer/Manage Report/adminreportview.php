@@ -112,8 +112,9 @@ $row= mysqli_fetch_array($edit);
                                                     <input type="hidden"  class="form-control" name="rsta" value="Solved" > 
                                                     <button  data-toggle="tooltip"  type="submit" name="submit"  title="Solved" class="pd-setting-ed" style="background-color: #3CB628;"><i class="fa fa-check" style="color: white;"aria-hidden="true"></i></button>
                                                 </div>
+                                                
                                             </form>
-
+                                            <button onclick="if(confirm('Are you sure you want to delete this report?')){location.href='../../Business%20Service%20Layer/Manage%20Report/deletereport.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027; height: 28px;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
                                         </td>
                                        
                                     </tr>
