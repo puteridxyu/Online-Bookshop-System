@@ -62,7 +62,7 @@ if(!$connection)
                             <h4>Admins List</h4>
                             <div class="breadcome-heading" style="margin-bottom: 20px;">
                                 <form role="search" class="sr-input-func">
-                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
+                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search admin..." class="search-int form-control">
                                     <a onclick="searchTable()"><i class="fa fa-search"></i></a>
                                 </form>
                             </div>
@@ -115,24 +115,5 @@ if(!$connection)
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>
 
-<script>
-    function searchTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("tableId");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
-</script>
+
 

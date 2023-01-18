@@ -68,7 +68,7 @@ $row= mysqli_fetch_array($edit);
                                             <p style="font-size: 20px;"><b> <?= $row['name'];?></b><br /></p>
                                         </div>
                                     </div>
-                                </div>
+                            </div>
                                 
                                 
                             </div>

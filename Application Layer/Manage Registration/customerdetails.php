@@ -48,7 +48,7 @@ $row= mysqli_fetch_array($retrive);
                             <h4>Customers List</h4>
                             <div class="breadcome-heading" style="margin-bottom: 20px;">
                                 <form role="search" class="sr-input-func">
-                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
+                                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search customer..." class="search-int form-control">
                                     <a onclick="searchTable()"><i class="fa fa-search"></i></a>
                                 </form>
                             </div>
