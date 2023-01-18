@@ -7,9 +7,6 @@ if(!$connection)
 	echo "Database connection faild...";
 }
 	
-
-
-
 	$id=$_GET['id'];;
 	mysqli_query($connection,"delete from `admin` where id='$id'");
 	header('location:http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php');

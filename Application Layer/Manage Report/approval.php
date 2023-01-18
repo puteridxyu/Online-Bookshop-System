@@ -19,7 +19,7 @@ if(count($_POST)>0)
 	mysqli_query($connection,"UPDATE report set rsta='" . $_POST['rsta'] . "' WHERE `report`.`id` = $id");
     $update = "Update has been successfully.!";
    
-echo '<script>setTimeout(function(){window.location.href = "../../Application Layer/Manage Report/adminreportview.php";},50);</script>';
+echo '<script>setTimeout(function(){window.location.href = "../../Application Layer/Manage Report/approval.php";},50);</script>';
 
 }
 
@@ -80,7 +80,7 @@ $row= mysqli_fetch_array($edit);
                                 
                             </div>
                             <div class="add-product">
-                                <a title="Add Stock" href="approval.php">Add Stock</a>
+                                <a title="Add Stock" href="adminreportview.php">All report</a>
                             </div>
                             <div class="asset-inner">
                                 <table id="tableId">
@@ -107,7 +107,7 @@ $row= mysqli_fetch_array($edit);
                                         <td style="display: flex; justify-content: center;">
                                             
                                             <div>&nbsp;</div>
-                                            <form action="adminreportview.php" method="POST">
+                                            <form action="approval.php" method="POST">
                                                 <div class="form-group">
                                                     <input type="hidden"  name="id" value=<?= $row['id'];?> >
                                                     <input type="hidden"  class="form-control" name="rsta" value="Solved" > 

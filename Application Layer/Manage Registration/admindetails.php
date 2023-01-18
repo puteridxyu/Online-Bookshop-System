@@ -72,10 +72,10 @@ if(!$connection)
                             <div class="asset-inner">
                                 <table id="tableId"  >
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Password</th>
-                                        <th>Email</th>
-                                        <th>Action</th>
+                                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Name</th>
+                                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Password</th>
+                                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Email</th>
+                                        <th style="text-align:center" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Action</th>
                                     </tr>
 
                                     <?php while($row = mysqli_fetch_array($retrive)) { ?>
@@ -84,9 +84,14 @@ if(!$connection)
                                         <td><?= $row['apass'];?></td>
                                         <td><?= $row['aemail'];?></td>
                                         
-                                        <td>
-                                        <button onclick="if(confirm('Are you sure you want to delete this admin?')){location.href='../../Business%20Service%20Layer/Manage%20Registration/deleteadmin.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #D80027;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
-                                      </td>
+                                      <td style="text-align:center">
+                                        
+                                        <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;"
+                                        class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Registration/deleteadmin.php? id=<?php echo $row['id']; ?>">
+                                        <i class="fa fa-trash-o" style="color: white;"></i>
+                                        </a>
+                                    </td>
+
                                     </tr>
                                     <?php }?>
 
