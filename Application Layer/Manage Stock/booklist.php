@@ -171,99 +171,63 @@ function searchTable() {
 </script>
 
 <script>
-// Get the table element
-var table = document.getElementById("tableId2");
+    // Get the table
+    var table = document.getElementById("tableId2");
 
-// Get the rows of the table
-var rows = table.getElementsByTagName("tr");
+    // Add a new first column for the numbering
+    for (var i = 0; i < table.rows.length; i++) {
+        var newCell = table.rows[i].insertCell(0);
+        newCell.innerHTML = i;
+    }
 
-// Create an array to store the rows
-var rowArray = [];
-
-// Add the rows to the array
-for (var i = 1; i < rows.length; i++) {
-    rowArray.push(rows[i]);
-}
-
-
-rowArray.sort(function(a, b) {
-    var textA = a.cells[1].innerHTML.toUpperCase();
-    var textB = b.cells[1].innerHTML.toUpperCase();
-    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-});
-
-// Clear the table
-while (table.firstChild) {
-    table.removeChild(table.firstChild);
-}
-
-// Add the sorted rows back to the table
-for (var i = 0; i < rowArray.length; i++) {
-    table.appendChild(rowArray[i]);
-}
-</script>
-
-<script>
     // Declare variables
-        var table = document.getElementById("tableId2"),
-            prevBtn = document.getElementById("prevBtn"),
-            nextBtn = document.getElementById("nextBtn"),
-            currentPage = 0,
-            rowsPerPage = 11;
+    var table = document.getElementById("tableId2"),
+        prevBtn = document.getElementById("prevBtn"),
+        nextBtn = document.getElementById("nextBtn"),
+        currentPage = 0,
+        rowsPerPage = 11;
 
-        // Hide all rows
-        for (var i = 1; i < table.rows.length; i++) {
+    // Hide all rows
+    for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].style.display = "none";
+    }
+
+    // Show the rows for the current page
+    for (var i = (currentPage * rowsPerPage); i < (currentPage + 1) * rowsPerPage; i++) {
+        if (table.rows[i]) {
+            table.rows[i].style.display = "table-row";
+        }
+    }
+
+    // Add event listeners to the buttons
+    prevBtn.addEventListener("click", function() {
+        if (currentPage > 0) {
+            currentPage--;
+            updateTable();
+        }
+    });
+    nextBtn.addEventListener("click", function() {
+        if (currentPage < numPages() - 1) {
+            currentPage++;
+            updateTable();
+        }
+    });
+
+    // Function to update the table
+    function updateTable() {
+        for (var i = 0; i < table.rows.length; i++) {
             table.rows[i].style.display = "none";
         }
-
-        // Show the rows for the current page
         for (var i = (currentPage * rowsPerPage); i < (currentPage + 1) * rowsPerPage; i++) {
             if (table.rows[i]) {
                 table.rows[i].style.display = "table-row";
             }
         }
+    }
 
-        // Add event listeners to the buttons
-        prevBtn.addEventListener("click", function() {
-            if (currentPage > 0) {
-                currentPage--;
-                updateTable();
-            }
-        });
-        nextBtn.addEventListener("click", function() {
-            if (currentPage < numPages() - 1) {
-                currentPage++;
-                updateTable();
-            }
-        });
-
-        // Function to update the table
-        function updateTable() {
-            for (var i = 1; i < table.rows.length; i++) {
-                table.rows[i].style.display = "none";
-            }
-            for (var i = (currentPage * rowsPerPage); i < (currentPage + 1) * rowsPerPage; i++) {
-                if (table.rows[i]) {
-                    table.rows[i].style.display = "table-row";
-                }
-            }
-        }
-
-        // Function to calculate the number of pages
-        function numPages() {
-            return Math.ceil(table.rows.length / rowsPerPage);
-        }
-        </script>
-
-        <script>
-            // Get the table
-        var table = document.getElementById("tableId2");
-
-        // Add a new first column for the numbering
-        for (var i = 0; i < table.rows.length; i++) {
-            var newCell = table.rows[i].insertCell(0);
-            newCell.innerHTML = i;
-        }
+    // Function to calculate the number of pages
+    function numPages() {
+        return Math.ceil(table.rows.length / rowsPerPage);
+    }
 </script>
-
 
