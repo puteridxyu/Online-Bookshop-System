@@ -71,7 +71,7 @@ $row= mysqli_fetch_array($edit);
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap drp-lst">
-                            <h4>Reports List</h4>
+                            <h4>Approval Reports List</h4>
                             <div class="breadcome-heading" style="margin-bottom: 20px;">
                                 <form role="search" class="sr-input-func">
                                     <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
@@ -80,7 +80,7 @@ $row= mysqli_fetch_array($edit);
                                 
                             </div>
                             <div class="add-product">
-                                <a title="Add Stock" href="adminreportview.php">All report</a>
+                                <a title="Add Stock" href="adminreportview.php">All report </a>
                             </div>
                             <div class="asset-inner">
                                 <table id="tableId">

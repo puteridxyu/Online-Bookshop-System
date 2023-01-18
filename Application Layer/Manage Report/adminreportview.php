@@ -88,10 +88,11 @@ $row= mysqli_fetch_array($edit);
                                 <input type="text" style="visibility: hidden;" id="dateInput2">
     
 
-                                <div class="btn-group btn-custom-groups" style="display: flex; justify-content: center; float: right; margin-right: -120px;">
-                                <p style="margin: auto; width: 50%; padding: 10px;">Sort :  </p>
-                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;"onclick="searchTableDay()" class="btn btn-default" >By Day</a>
-                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;" onclick="searchTable1()" class="btn btn-default"> By Month</a>
+                                <div class="btn-group btn-custom-groups" style="display: flex; justify-content: center; float: right; width: auto; margin-right: -95px; ">
+                                    <p style="margin: auto; width: 100px; padding: 10px;">Sort :  </p>
+                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;" onclick="location.reload()" class="btn btn-default" >All</a>
+                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;"onclick="searchTableDay()" class="btn btn-default" >Today</a>
+                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;" onclick="searchTable1()" class="btn btn-default"> This Month</a>
                                 </div>
 <br><br>
                                 
