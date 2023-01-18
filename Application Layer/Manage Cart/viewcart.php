@@ -88,12 +88,12 @@ if(!$connection)
                                         <td style="text-align:center"> '.$i.'
                                         <td style="text-align:center"> '.$x['category'].'
                                         <td style="text-align:center"> '.$x['name'].'
-                                        <td style="text-align:center"> <input type="text" id="quantity" onkeydown="refresh()" size="2" value="'.$x['qty'].'" name="'.$name.'">
+                                        <td style="text-align:center"> <input type="text" id="quantity" size="2" value="'.$x['qty'].'" name="'.$name.'">
                                         <td style="text-align:center"> RM '.$x['price'].'.00
                                         <td style="text-align:center"> RM '.($x['qty']*$x['price']).'.00
                                         <td style="text-align:center">
                                         
-                                            <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;width:50px;"
+                                            <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;width:50px;" 
                                             class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
                                             <i class="fa fa-trash-o" style="color: white;"></i>
                                             </a>
@@ -135,7 +135,7 @@ if(!$connection)
                                         <form action="../../Application%20Layer/Manage%20Delivery/custdetails.php" method="POST">
                                             <input type="hidden"  name="cid" value="<?php echo "$e" ?>" ><br>
                                             <input type="hidden"  name="cprice" value="<?php echo "$tot" ?>" ><br>
-                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CHECKOUT">
+                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CHECKOUT" onclick="return confirm('Are you sure to checkout?')">
                                             
                                         </form>                                        
                                         </td>
