@@ -7,10 +7,7 @@ if(!$connection)
 	echo "Database connection faild...";
 }
 	
-
-
-
 	$id=$_GET['id'];;
-	mysqli_query($connection,"delete from `register` where id='$id'");
+	mysqli_query($connection,"delete from `register` where Firstname='$id'");
 	header('location:../../Application%20Layer/Manage%20Registration/customerdetails.php');
 ?>
