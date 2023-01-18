@@ -74,7 +74,7 @@ $row= mysqli_fetch_array($retrive);
 
                                         <td style="text-align:center">
                                         <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;"
-                                        class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Registration/deletecustomer.php? id=<?php echo $row['Firstname']; ?>">
+                                        class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Registration/deletecustomer.php? id=<?php echo $row['id']; ?>">
                                         <i class="fa fa-trash-o" style="color: white;"></i>
                                         </a>
                                     </td>

@@ -8,6 +8,6 @@ if(!$connection)
 }
 	
 	$id=$_GET['id'];;
-	mysqli_query($connection,"delete from `register` where Firstname='$id'");
+	mysqli_query($connection,"delete from `register` where id='$id'");
 	header('location:../../Application%20Layer/Manage%20Registration/customerdetails.php');
 ?>

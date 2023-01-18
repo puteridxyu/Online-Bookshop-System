@@ -8,6 +8,6 @@ if(!$connection)
 }
 	
 	$id=$_GET['id'];;
-	mysqli_query($connection,"delete from `admin` where aname='$id'");
+	mysqli_query($connection,"delete from `admin` where id='$id'");
 	header('location:http://localhost/sd/Application%20Layer/Manage%20Registration/admindetails.php');
 ?>
