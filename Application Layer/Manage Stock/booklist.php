@@ -116,7 +116,7 @@ if(isset($_POST['submit']))
                                         <td>RM <?= $row['price'];?>.00</td>
                                         <td><?php echo '<img src="data:image;base64, '.base64_encode($row['img']).'" alt= "Image" style="width: 100px; height: auto;">'; ?></td>
                                         <td style="display: flex; justify-content: center;">
-                                        <button onclick="location.href='../../Application Layer/Manage Cart/viewcart.php'" data-toggle="tooltip" title="Edit Item" class="pd-setting-ed" style="background-color: #218838;"><i class="fa fa-edit" style="color: white;"aria-hidden="true"></i></button>
+                                        <button onclick="location.href='../../Application Layer/Manage Stock/editstock.php?id=<?php echo $row["id"]; ?>'" data-toggle="tooltip" title="Edit Item" class="pd-setting-ed" style="background-color: #218838;"><i class="fa fa-edit" style="color: white;"aria-hidden="true"></i></button>
                                         <button onclick="if(confirm('Are you sure you want to delete this item?')){location.href='../../Business%20Service%20Layer/Manage%20Stock/delete.php?id=<?php echo $row["id"]; ?>'}" data-toggle="tooltip" title="Delete Item" class="pd-setting-ed" style="background-color: #DC3545;"><i class="fa fa-trash-o" style="color: white;"aria-hidden="true"></i></button>
                                       </tr>
                                     <?php
@@ -144,6 +144,64 @@ if(isset($_POST['submit']))
 
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>
+
+
+<script>
+function searchTable() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableId2");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+}
+</script>
+
+<script>
+// Get the table element
+var table = document.getElementById("tableId2");
+
+// Get the rows of the table
+var rows = table.getElementsByTagName("tr");
+
+// Create an array to store the rows
+var rowArray = [];
+
+// Add the rows to the array
+for (var i = 1; i < rows.length; i++) {
+    rowArray.push(rows[i]);
+}
+
+
+rowArray.sort(function(a, b) {
+    var textA = a.cells[1].innerHTML.toUpperCase();
+    var textB = b.cells[1].innerHTML.toUpperCase();
+    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
+
+// Clear the table
+while (table.firstChild) {
+    table.removeChild(table.firstChild);
+}
+
+// Add the sorted rows back to the table
+for (var i = 0; i < rowArray.length; i++) {
+    table.appendChild(rowArray[i]);
+}
+</script>
 
 <script>
     // Declare variables
@@ -207,30 +265,5 @@ if(isset($_POST['submit']))
             newCell.innerHTML = i;
         }
 </script>
-
-<script>
-function searchTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("tableId2");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        for (var j = 0; j < td.length; j++) {
-            if (td[j]) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break;
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }       
-        }
-    }
-}
-</script>
-
 
 

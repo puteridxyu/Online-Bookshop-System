@@ -128,14 +128,9 @@ if(isset($_POST['submit']))
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <ul class="breadcome-menu">
-                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
-                                            </li>
-                                            <li><a href="#">Stock</a> <span class="bread-slash">/</span>
-                                            </li>
-                                            <li><span class="bread-blod">Add</span>
-                                            </li>
-                                        </ul>
+                                        <div class="btn-group btn-custom-groups" style="float: right;">
+                                          <a type="button" title="back" style=""class="btn btn-default" href="../../Application Layer/Manage Stock/booklist.php"><i class="fa fa-times" aria-hidden="true">&nbsp;</i> Back</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +181,7 @@ if(isset($_POST['submit']))
                                                                     <input type='text' name='name' class="form-control" placeholder="Item Name" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type='text' name='edition' class="form-control" placeholder="Author / Brand" required>
+                                                                    <input type='text' name='edition' class="form-control" placeholder="Author / Brand" >
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <input type='float' name='price' pattern="^[0-9]+(\.[0-9]+)?$" class="form-control" placeholder="Price" required>
@@ -197,11 +192,11 @@ if(isset($_POST['submit']))
 
                                                             
                                                                 <div class="form-group">
-                                                                    <input type='number' name='page'  pattern="^[0-9]+)?$" class="form-control" placeholder="Page Number" required>
+                                                                    <input type='number' name='page'  pattern="^[0-9]+)?$" class="form-control" placeholder="Page Number" >
                                                                 </div>
                                                               
                                                                 <div class="form-group">
-                                                                    <input type='text' name='isbn' class="form-control" placeholder="ISBN" required>
+                                                                    <input type='text' name='isbn' class="form-control" placeholder="ISBN" >
                                                                 </div>
                                                                 
                                                                 <div class="form-group">

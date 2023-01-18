@@ -35,9 +35,16 @@ $row= mysqli_fetch_array($edit);
 <!-- /header -->
 <?php include '../../x/layout/adminheaderNsidebar.php'; ?>
 
+<script>
+    window.onload = function() {
+        setCurrentMonthAndYear();
+    };
+</script>
+
+
 
             <!-- Mobile Menu end -->
-            <div class="breadcome-area">
+            <div class="breadcome-area" onload="setCurrentMonthAndYear()">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -71,12 +78,24 @@ $row= mysqli_fetch_array($edit);
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap drp-lst">
                             <h4>Reports List</h4>
-                            <div class="breadcome-heading" style="margin-bottom: 20px;">
+                            <div class="breadcome-heading" style="margin-bottom: 20px; display: flex; justify-content: space-between;">
                                 <form role="search" class="sr-input-func">
                                     <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search name..." class="search-int form-control">
                                     <a onclick="searchTable()"><i class="fa fa-search"></i></a>
                                 </form>
+
+                                <input type="text" style="visibility: hidden;" id="dateInput">
+                                <input type="text" style="visibility: hidden;" id="dateInput2">
+    
+
+                                <div class="btn-group btn-custom-groups" style="display: flex; justify-content: center; float: right; margin-right: -120px;">
+                                <p style="margin: auto; width: 50%; padding: 10px;">Sort :  </p>
+                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;"onclick="searchTableDay()" class="btn btn-default" >By Day</a>
+                                    <a type="button" style="margin: auto; width: 50%; padding: 10px;" onclick="searchTable1()" class="btn btn-default"> By Month</a>
+                                </div>
+<br><br>
                                 
+
                             </div>
                             <div class="add-product">
                                 <a title="Add Stock" href="approval.php" >Approval</a>
@@ -144,8 +163,71 @@ $row= mysqli_fetch_array($edit);
                 </div>
             </div>
         </div>
+
+        
         <script>
-    // Get the table element
+function searchTable1() {
+    var date, table, tr, td, i, txtValue;
+    date = document.getElementById("dateInput").value;
+    table = document.getElementById("tableId");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.indexOf(date) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+}
+</script>
+
+<script>
+        function searchTableDay() {
+            var date, table, tr, td, i, txtValue;
+            date = document.getElementById("dateInput2").value;
+            table = document.getElementById("tableId");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                for (var j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.indexOf(date) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }       
+                }
+            }
+        }
+    </script>
+
+<script>
+    function setCurrentMonthAndYear() {
+        var today = new Date();
+        var day = (today.getDate() < 10 ? '0' + today.getDate() : today.getDate());
+        var month = (today.getMonth() + 1 < 10 ? '0' + (today.getMonth() + 1) : (today.getMonth() + 1));
+        var date = today.getFullYear() + '-' + month;
+
+        var todayy = today.getFullYear() + '-' + month + '-' + day;
+
+        document.getElementById("dateInput").value = date;
+
+        document.getElementById("dateInput2").value = todayy;
+    }
+</script>
+
+<script>
+// Get the table element
 var table = document.getElementById("tableId");
 
 // Get the rows of the table
@@ -176,6 +258,8 @@ for (var i = 0; i < rowArray.length; i++) {
     table.appendChild(rowArray[i]);
 }
 </script>
+
+
 
 <!-- /header -->
 <?php include '../../x/layout/footer.php'; ?>

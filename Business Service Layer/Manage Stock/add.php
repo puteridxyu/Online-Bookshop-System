@@ -27,8 +27,15 @@ if(isset($_POST['submit']))
     $insert = "INSERT INTO books (name, category, description, page, edition, isbn, price, img) VALUES ('$name', '$category','$description', '$page','$edition', '$isbn','$price', '$file')";
     if(mysqli_query($connection, $insert))
     {
-        $message =  "Records added successfully.";
-		header("Location: http://localhost/sd/Application%20Layer/Manage%20Stock/booklist.php");
+        echo '
+
+        <div class="alert alert-success" style="position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; font-size: 25px; text-align: center; border: 2px solid grey; height: 200px; width: 500px; font-family: Arial, Helvetica, sans-serif;
+        "><br><br><br>The new item successfully added!</div>
+    
+        ';
+
+        echo '<script>setTimeout(function(){window.location.href = "../../Application Layer/Manage Stock/booklist.php";},500);</script>';
     } 
     else
     {
