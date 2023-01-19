@@ -234,30 +234,30 @@ if(isset($_POST['submit']))
                                             
 
                                             <div  class="pro-ad">
-                                                    <form action="/upload"  id="demo1-upload">
+                                                    <form >
                                                         <div class="row">
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 
                                                                     <div class="form-control" style="text-align: center; min-height: 150px; border: 2px dashed #CCCCCC;
                                                                                 background: white;padding: 20px 20px; cursor: pointer; " >
-
+                                                                                <br><br>
                                                                         <i style="color: #999999; font-size: 30px;" class="fa fa-download" aria-hidden="true" ></i>
                                                                         <h2 style="font-size:17px; color: #999999; ">
                                                                             Drop excel file here or click to upload.
-                                                                        </h2><br>
-
-                                                                        <h2 style="font-size:17px; color: #999999; margin-left: 75px; font-weight: normal;" >
-                                                                            <div style="display: flex; align-items: center; justify-content: center;">
-                                                                            <input type='file' name='img' id='img' id="image-upload" style="border: none; font-weight: lighter; font-size: 10px;" required/> </div>
                                                                         </h2>
+                                                                        
+                                                                        <h2 style="font-size:17px; color: #999999; margin-left: 75px; font-weight: normal;" >
+                                                                        </h2> <br><br><br>
+                                                                        
                                                                    </div>
                                                             </div>
+                                                            
                                                             
                                                                                                                   </div>
                                                         <div class="row">
                                                             <div class="col-lg-12"><br>
                                                                 <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                    <button href="#" class="btn btn-primary waves-effect waves-light" disable>Submit</button>
                                                                 </div>
                                                             </div>
                                                         </div>

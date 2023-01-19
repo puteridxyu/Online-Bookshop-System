@@ -14,6 +14,12 @@ if(!$connection)
 <!-- /header -->
 <?php include '../../x/layout/headerNsidebar.php'; ?>
 
+<script>
+    window.onload = function() {
+        setCurrentMonthAndYear();
+    };
+</script>
+
             <!-- Mobile Menu end -->
             <div class="breadcome-area">
                 <div class="container-fluid">
@@ -68,7 +74,14 @@ if(!$connection)
                                                                 <label class="login2 pull-right pull-right-pro">Date & Time</label>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
-                                                                <input name="rdate" type="datetime-local" class="form-control" placeholder="Enter the date and time of report" required/>
+                                                   
+                                                                <input type="text" id="date" name="rdate" class="form-control" disabled placeholder="">
+
+                                                                <script>
+                                                                var today = new Date();
+                                                                var date = today.toLocaleString().replace(",","").replace(/\s/g,"-").slice(0,14);
+                                                                document.getElementById("date").placeholder = date;
+                                                                </script>
                                                             </div>
                                                         </div>
                                                     </div>    

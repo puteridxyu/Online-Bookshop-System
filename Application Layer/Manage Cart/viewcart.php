@@ -75,54 +75,58 @@ if(!$connection)
                                     </tr>
                                     
                                     <?php
-									$tot = 0;
-									$i = 1;
-									if(isset($_SESSION['cart']))
-									{
+$tot = 0;
+$i = 1;
+if(isset($_SESSION['cart'])) {
+    foreach($_SESSION['cart'] as $name=>$x) {
+        $totalCost = $x['qty'] * $x['price'];
+        $tot += $totalCost;
+        echo '
+            <tr>
+                <td style="text-align:center"> '.$i.'
+                <td style="text-align:center"> '.$x['category'].'
+                <td style="text-align:center"> '.$x['name'].'
+                <td style="text-align:center"> 
+                    <input type="text" id="quantity'.$i.'" size="2" value="'.$x['qty'].'" onchange="updateTotal('.$i.', '.$x['price'].')" name="'.$name.'">
+                <td style="text-align:center"> RM '.$x['price'].'.00
+                <td style="text-align:center" id="total-cost-'.$i.'" class="total-cost"> RM '.$totalCost.'.00
+                <td style="text-align:center">
+                    <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;width:50px;" 
+                    class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
+                    <i class="fa fa-trash-o" style="color: white;"></i>
+                    </a>
+                </td>
+            </tr>
 
-									foreach($_SESSION['cart'] as $name=>$x)
-									{	
-										echo '
-                                    <tr>
-                                       
-                                        <td style="text-align:center"> '.$i.'
-                                        <td style="text-align:center"> '.$x['category'].'
-                                        <td style="text-align:center"> '.$x['name'].'
-                                        <td style="text-align:center"> <input type="text" id="quantity" size="2" value="'.$x['qty'].'" name="'.$name.'">
-                                        <td style="text-align:center"> RM '.$x['price'].'.00
-                                        <td style="text-align:center"> RM '.($x['qty']*$x['price']).'.00
-                                        <td style="text-align:center">
-                                        
-                                            <a data-toggle="modal" title="Delete Item" style="background-color: #D80027;width:50px;" 
-                                            class="open-qq btn btn-danger shadow-sm rounded " href="../../Business%20Service%20Layer/Manage%20Cart/process_cart.php?id='.$name.'">
-                                            <i class="fa fa-trash-o" style="color: white;"></i>
-                                            </a>
-                                        </td>
-
-                                    </tr>
-										';
-										
-										$tot = $tot + ($x['qty']*$x['price']);
-										$i++;
-										$e = rand(200,700);
-									}
-									}
-								
-								?>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td style="font-weight: bold;text-align:center">Total</td>
-                                        <td style="font-weight: bold;text-align:center">
-                                            RM <?php echo $tot; ?>.00 
-                                        </td>
-                                    </form>
-                                        
-                                    </tr>
+            <script>
+                function updateTotal(i, price) {
+                    var quantity = document.getElementById("quantity" + i).value;
+                    var totalCost = document.getElementById("total-cost-" + i);
+                    totalCost.innerHTML = "RM " + (quantity * price) + ".00";
+                    updateGrandTotal();
+                }
+                function updateGrandTotal(){
+                    var grandTotal = 0;
+                    var totalCosts = document.getElementsByClassName("total-cost");
+                    for(var i = 0; i < totalCosts.length; i++){
+                        grandTotal += parseFloat(totalCosts[i].innerHTML.replace("RM ", "").replace(".00", ""));
+                    }
+                    document.getElementById("grand-total").innerHTML = "RM " + grandTotal + ".00";
+                }
+            </script>
+        '; 
+        $i++;
+    }
+}
+?>
+<tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td style="font-weight: bold;text-align:center">Total</td>
+    <td style="font-weight: bold;text-align:center" id="grand-total"> RM <?php echo $tot; ?>.00</td>
+</tr>
 
                                     <tr>
                                         <td>&nbsp;</td>

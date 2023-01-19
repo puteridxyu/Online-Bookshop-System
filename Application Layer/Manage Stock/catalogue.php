@@ -41,9 +41,11 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="admintab-wrap edu-tab1 mg-t-30" style="margin-top: 1px;  ">
                             <ul class="nav nav-tabs custom-menu-wrap custon-tab-menu-style1" style="margin-left: 16px;">
-                                <li class="active"><a data-toggle="tab" href="#TabProject"><span class="edu-icon edu-analytics tab-custon-ic"></span>Malay</a>
+                                <li class="active"><a data-toggle="tab" href="#All"><span class="edu-icon edu-analytics tab-custon-ic"></span>All</a>
                                 </li>
-                                <li><a data-toggle="tab" href="#TabDetails"><span class="edu-icon edu-analytics-arrow tab-custon-ic"></span>English</a>
+                                <li><a data-toggle="tab" href="#Malay"><span class="edu-icon edu-analytics-arrow tab-custon-ic"></span>Malay</a>
+                                </li>
+                                <li><a data-toggle="tab" href="#English"><span class="edu-icon edu-analytics-arrow tab-custon-ic"></span>English</a>
                                 </li>
                                 <li><a data-toggle="tab" href="#TabPlan"><span class="edu-icon edu-analytics-bridge tab-custon-ic"></span>Revision</a>
                                 </li>
@@ -53,14 +55,21 @@
                                 </li>
                             </ul>
                             <div class="tab-content" style="padding: 15px;">
-                                <div id="TabProject" class="tab-pane in active animated flipInX custon-tab-style1">
+                                <div id="All" class="tab-pane in active animated flipInX custon-tab-style1">
+                                     
+                                
+                                    <!-- /malaybook -->
+                                    <?php include 'allbook.php'; ?>  
+                                
+                                </div>
+                                <div id="Malay" class="tab-pane in active animated flipInX custon-tab-style1">
                                      
                                 
                                     <!-- /malaybook -->
                                     <?php include 'malaybook.php'; ?>  
                                 
                                 </div>
-                                <div id="TabDetails" class="tab-pane animated flipInX custon-tab-style1">
+                                <div id="English" class="tab-pane animated flipInX custon-tab-style1">
              
 
                                     <!-- /english -->
