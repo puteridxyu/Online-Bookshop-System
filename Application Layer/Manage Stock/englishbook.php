@@ -21,7 +21,7 @@ $row= mysqli_fetch_array($retrive);
     <div style="margin-top: 8px; display: flex; justify-content: flex-start;">
         <div>
             <form role="search" class="sr-input-func" >
-            <input type="text" id="searchInputenglish" onkeyup="searchTable()" placeholder="Search name..." style="background-color: white;"class="search-int form-control">
+            <input type="text" id="searchInputenglish" onkeyup="searchTable()" placeholder="Search items..." style="background-color: white;"class="search-int form-control">
             <a onclick="searchTable()"><i class="fa fa-search"></i></a>
             </form>
         </div>
@@ -119,4 +119,28 @@ $row= mysqli_fetch_array($retrive);
         container.appendChild(items[i]);
     }
   });
+</script>
+
+<script>
+	function searchTable() {
+  // Get the value of the search input field
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchInputenglish");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("items-container");
+  tr = table.getElementsByClassName("item");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("h2")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
 </script>
