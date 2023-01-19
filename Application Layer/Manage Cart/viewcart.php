@@ -116,6 +116,7 @@ if(isset($_SESSION['cart'])) {
             </script>
         '; 
         $i++;
+        $e = rand(200,700);
     }
 }
 ?>
@@ -137,9 +138,9 @@ if(isset($_SESSION['cart'])) {
                                         <td>&nbsp;</td>
                                         <td>
                                         <form action="../../Application%20Layer/Manage%20Delivery/custdetails.php" method="POST">
-                                            <input type="hidden"  name="cid" value="<?php echo "$e" ?>" ><br>
-                                            <input type="hidden"  name="cprice" value="<?php echo "$tot" ?>" ><br>
-                                            <input type="submit" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CHECKOUT" onclick="return confirm('Are you sure to checkout?')">
+                                            <input type="hidden"  name="cid" value="<?php echo $e; ?>" ><br>
+                                            <input type="hidden"  name="cprice" value="<?php echo $tot; ?>" ><br>
+                                            <input type="" class="open-qq btn btn-success shadow-sm rounded pull-right" name="submit" value="CHECKOUT" onclick="return confirm('Are you sure to checkout?')">
                                             
                                         </form>                                        
                                         </td>

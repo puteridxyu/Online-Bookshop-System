@@ -7,7 +7,7 @@ if(!$connection)
 	echo "Database connection faild...";
 }
 
-$retrive = mysqli_query($connection, "SELECT * FROM books where category = 'Malay books'");
+$retrive = mysqli_query($connection, "SELECT * FROM books ");
 $row= mysqli_fetch_array($retrive);
 
 ?>

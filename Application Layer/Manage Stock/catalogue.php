@@ -49,7 +49,7 @@
                                 </li>
                                 <li><a data-toggle="tab" href="#TabPlan"><span class="edu-icon edu-analytics-bridge tab-custon-ic"></span>Revision</a>
                                 </li>
-                                <li><a data-toggle="tab" href="#Tab2"><span class="edu-icon edu-analytics-bridge tab-custon-ic"></span>Stationary</a>
+                                <li><a data-toggle="tab" href="#Tab2"><span class="edu-icon edu-analytics-bridge tab-custon-ic"></span>Stationery</a>
                                 </li>
                                 <li style="float: right; margin-right: 16px; "><button onclick="location.href='../../Application Layer/Manage Cart/viewcart.php'" style="background-color: #EE4D2D;" type="button" class="btn btn-custon-rounded-two btn-warning" ><i class="fa fa-shopping-cart edu-warning-danger" aria-hidden="true">&nbsp;</i> Cart</button>
                                 </li>
@@ -62,7 +62,8 @@
                                     <?php include 'allbook.php'; ?>  
                                 
                                 </div>
-                                <div id="Malay" class="tab-pane in active animated flipInX custon-tab-style1">
+                                
+                                <div id="Malay" class="tab-pane animated flipInX custon-tab-style1">
                                      
                                 
                                     <!-- /malaybook -->

@@ -27,10 +27,10 @@ $row= mysqli_fetch_array($retrive);
         </div>
         
         <div>
-            <a type="button"  onclick="reloadPage()" style="" class="btn btn-default" ><i class="fa fa-star edu-warning-danger" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>Highest</a>
+            <a type="button"  onclick="reloadPage()" style="margin-left: 30px;" class="btn btn-default" ><i style="color: #EE4D2D;" class="fa fa-star edu-warning-danger" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>Top Items</a>
         </div>
     </div>
-    <div style="float: right; width: auto; margin-right: -95px; ">
+    <div style="float: right; width: auto; margin-right: 50px; ">
 
         <input type="text" style="visibility: hidden;" >
         <input type="text" style="visibility: hidden;" >
