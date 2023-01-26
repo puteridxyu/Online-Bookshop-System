@@ -74,14 +74,7 @@ if(!$connection)
                                                                 <label class="login2 pull-right pull-right-pro">Date & Time</label>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
-                                                   
-                                                                <input type="text" id="date" name="rdate" class="form-control" disabled placeholder="">
-
-                                                                <script>
-                                                                var today = new Date();
-                                                                var date = today.toLocaleString().replace(",","").replace(/\s/g,"-").slice(0,14);
-                                                                document.getElementById("date").placeholder = date;
-                                                                </script>
+                                                            <input name="rdate" type="datetime-local" class="form-control" placeholder="Enter the date and time of report" required/>
                                                             </div>
                                                         </div>
                                                     </div>    
@@ -100,7 +93,7 @@ if(!$connection)
                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                 <label class="login2 pull-right pull-right-pro">Email</label>
                                                             </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                                                            <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12"> 
                                                                 <input name="remail" type="email" class="form-control" placeholder="Enter your email" required/>
                                                             </div>
                                                         </div>
