@@ -27,3 +27,5 @@ This Online Bookshop System is built using PHP, Bootstrap, MySQL, HTML, and CSS.
 - Efficient checkout organization: Effortlessly organize items during checkout for smooth transactions.
 
 And many more great features! Explore the system to discover more functionalities.
+
+*rename Online-Bookshop-System to SD after clone.
