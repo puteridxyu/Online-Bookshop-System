@@ -16,9 +16,13 @@ Admin able to manage stock and stationary properly
 
 Admin can handle the report from customer effectively
 
-![Image](images/readMe/cartCust.png)
+![Image](images/readMe/catalogueCust.png)
 
 Customer can view details and add to cart easily
+
+![Image](images/readMe/catalogueCust.png)
+
+Effortlessly organize checkout items
 
 and many more great features!
 
