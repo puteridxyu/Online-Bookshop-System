@@ -1,28 +1,29 @@
 # Online Bookshop System
 
-![Image](images/readMe/signInAdmin.png)
+This Online Bookshop System is built using PHP, Bootstrap, MySQL, HTML, and CSS.
 
-User sign in or register new account
+![User sign in or register](images/readMe/signInAdmin.png)
 
-![Image](images/readMe/dashboard.png)
+- User authentication: Users can sign in or register new accounts.
 
-Dashboard with interesting promo and coupun
+![Dashboard with promotions](images/readMe/dashboard.png)
 
-![Image](images/readMe/addStockAdmin.png)
+- Dashboard with interesting promotions and coupons to enhance user experience.
 
-Admin able to manage stock and stationary properly 
+![Admin stock management](images/readMe/addStockAdmin.png)
 
-![Image](images/readMe/reportAdmin.png)
+- Admin stock management: Easily manage stock and inventory.
 
-Admin can handle the report from customer effectively
+![Effective customer report handling](images/readMe/reportAdmin.png)
 
-![Image](images/readMe/catalogueCust.png)
+- Efficient report handling: Admins can effectively handle reports from customers.
 
-Customer can view details and add to cart easily
+![Customer shopping experience](images/readMe/catalogueCust.png)
 
-![Image](images/readMe/catalogueCust.png)
+- Seamless shopping experience: Customers can view product details and add items to the cart effortlessly.
 
-Effortlessly organize checkout items
+![Efficient checkout organization](images/readMe/catalogueCust.png)
 
-and many more great features!
+- Efficient checkout organization: Effortlessly organize items during checkout for smooth transactions.
 
+And many more great features! Explore the system to discover more functionalities.
