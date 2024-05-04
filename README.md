@@ -4,9 +4,11 @@
 
 ![Image](images/readMe/dashboard.png)
 
-![Image](images/readMe/addStock.png)
+![Image](images/readMe/addStockAdmin.png)
 
 ![Image](images/readMe/reportAdmin.png)
 
 ![Image](images/readMe/cartCust.png)
+
+and many more features!
 
