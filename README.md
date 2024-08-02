@@ -22,7 +22,7 @@ This Online Bookshop System is built using PHP, Bootstrap, MySQL, HTML, and CSS.
 
 - Seamless shopping experience: Customers can view product details and add items to the cart effortlessly.
 
-![cart](https://github.com/user-attachments/assets/9f5a5535-9538-447b-bed2-608d5c943a52)
+![catalogue](https://github.com/user-attachments/assets/dc4ed040-0000-4d63-9e0d-389da5725661)
 
 - Efficient checkout organization: Effortlessly organize items during checkout for smooth transactions.
 
